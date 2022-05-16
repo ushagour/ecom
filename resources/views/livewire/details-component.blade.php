@@ -9,6 +9,8 @@
 					<li class="item-link"><a href="#" class="link">home</a></li>
 					<li class="item-link"><span>detail</span></li>
 				</ul>
+				<a href="#"  wire:click.prevent="doSomething">Do Something</a>
+
 			</div>
 			<div class="row">
 
@@ -53,7 +55,7 @@
 								</div>
 							</div>
 							<div class="wrap-butons">
-								<a href="#" class="btn add-to-cart">Add to Cart</a>
+								<a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add To Cart</a>
                                 <div class="wrap-btn">
                                     <a href="#" class="btn btn-compare">Add Compare</a>
                                     <a href="#" class="btn btn-wishlist">Add Wishlist</a>
