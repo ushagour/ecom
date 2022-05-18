@@ -15,21 +15,21 @@ class ShopComponent extends Component
     public $sorting;
     public $pagesize;
 
-    public $count = 0;
+
  
-    public function doSomething()
-    {
-        $this->count++;
-    }
+    /* nb:In Livewire components, you use mount() instead of a class constructor __construct() like you may be used to. NB: mount() is only ever called when the component is first mounted and will not be called again even when the component is refreshed or rerendered.*/
     public function mount()
     {
         $this->sorting ="defult";
         $this->pagesize =12;
     }
+
+
   
     public function store($product_id,$product_name,$regular_price){
 
-        Cart::add($product_id,$product_name,$regular_price)->associate(Product::class);//frre9 biin Prodcut::class w app/model /
+       
+         Cart::add($product_id,$product_name,1,$regular_price)->associate('App\Models\Product');//frre9 biin Prodcut::class w app/model /
         Session()->flash('success_info','item added to cart');
         return redirect()->route('product.cart');//returniih  l page dyal cart 
         
