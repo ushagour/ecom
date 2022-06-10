@@ -2,22 +2,26 @@
 
 namespace App\Http\Livewire;
 
+use Livewire\Component;
+
 use App\Models\Product;
 use App\Models\Category;
 
-use Livewire\Component;
 use Livewire\WithPagination;
 use Cart;
 
 
 
-class ShopComponent extends Component
+class SearchComponent extends Component
 {
 
     public $sorting;
     public $pagesize;
     public $message;
 
+    public $search;
+    public $product_cat;
+    public $product_cat_id;
 
 
  
@@ -26,7 +30,7 @@ class ShopComponent extends Component
     {
         $this->sorting ="defult";
         $this->pagesize =12;
-        $this->fill(['message' => 'Hello World!']);
+        $this->fill(request()->only('search','product_cat','product_cat_id')); 
 
     }
 
@@ -46,18 +50,18 @@ class ShopComponent extends Component
     {
                     if ($this->sorting=='date') {
                         
-                        $products = Product::orderBy('created_at','DESC')->paginate($this->pagesize);
+                        $products = Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->orderBy('created_at','DESC')->paginate($this->pagesize);
 
                     }else if ($this->sorting =="price") {
-                        $products = Product::orderBy('regular_price','ASC')->paginate($this->pagesize);
+                        $products = Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->orderBy('regular_price','ASC')->paginate($this->pagesize);
 
                     }else if($this->sorting =="price-desc")
                     {
-                        $products = Product::orderBy('regular_price','DESC')->paginate($this->pagesize);
+                        $products = Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->orderBy('regular_price','DESC')->paginate($this->pagesize);
 
                     }else 
                     {
-                        $products = Product::paginate($this->pagesize);
+                        $products = Product::where('name','like','%'.$this->search.'%')->where('category_id','like','%'.$this->product_cat_id.'%')->paginate($this->pagesize);
 
                     }
         return view('livewire.shop-component',['products'=>$products,'categories'=>Category::all()])->layout("layouts.base");
