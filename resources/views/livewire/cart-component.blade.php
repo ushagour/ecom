@@ -1,4 +1,4 @@
-<!--main area-->
+
 <main id="main" class="main-site">
 
     <div class="container">
@@ -66,7 +66,6 @@
                 @endif
 
             </div>
-            <button class="btn btn" wire:click.prevent="test">test</button>
         
 
             <div class="summary">
@@ -281,4 +280,3 @@
     <!--end container-->
 
 </main>
-<!--main area-->

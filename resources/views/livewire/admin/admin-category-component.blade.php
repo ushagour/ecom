@@ -1,7 +1,5 @@
 
 
-  
-            <!-- start: page -->
                 <section class="panel">
                     <header class="panel-heading">
          
@@ -85,7 +83,6 @@
                     </div>
                 
                 </section>
-            <!-- end: page -->
 
 
 

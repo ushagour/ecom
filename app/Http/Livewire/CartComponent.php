@@ -17,7 +17,6 @@ class CartComponent extends Component
         $product = Cart::get($id);
         $qty = $product->qty +1;
         Cart::update($id,$qty);
-    //    return redirect()->route('product.cart');//returniih  l page dyal cart 
 
 
     }
@@ -28,7 +27,6 @@ class CartComponent extends Component
         $product = Cart::get($id);
         $qty = $product->qty -1;
         Cart::update($id,$qty);
-        return redirect()->route('product.cart');//returniih  l page dyal cart 
 
     }
     public function destroy($id)

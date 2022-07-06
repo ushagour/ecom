@@ -7,6 +7,7 @@ use App\Http\Livewire\ShopComponent;
 use App\Http\Livewire\CheckoutComponent;        
 use App\Http\Livewire\CategoryComponent;        
 use App\Http\Livewire\DetailsComponent;
+use App\Http\Livewire\TestComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
@@ -36,18 +37,20 @@ Route::get('/product-category/{category_slug}', CategoryComponent::class)->name(
 
 Route::get('/search',SearchComponent::class)->name('product.search');
 
+Route::get('/message',TestComponent::class)->name('message');
 
 
 
-// Route::middleware([
-//     'auth:sanctum',
-//     config('jetstream.auth_session'),
-//     'verified'
-// ])->group(function () {
-//     Route::get('/dashboard', function () {
-//         return view('dashboard');
-//     })->name('dashboard');
-// });
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
 //for admin
 
 Route::middleware([
