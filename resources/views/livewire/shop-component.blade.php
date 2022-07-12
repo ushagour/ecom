@@ -84,7 +84,7 @@
 			
 					<div class="wrap-pagination-info">
 						{{$products->links()}}
-						{{-- <ul class="page-numbers">
+				   {{-- <ul class="page-numbers">
 							<li><span class="page-number-item current" >1</span></li>
 							<li><a class="page-number-item" href="#" >2</a></li>
 							<li><a class="page-number-item" href="#" >3</a></li>

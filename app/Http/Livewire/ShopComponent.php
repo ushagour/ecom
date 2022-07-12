@@ -14,10 +14,9 @@ use Cart;
 class ShopComponent extends Component
 {
 
-    public $sorting;
-    public $pagesize;
-    public $message;
-    public  $post;
+    // public $sorting;
+    // public $pagesize;
+  
  
    
 
@@ -28,15 +27,11 @@ class ShopComponent extends Component
     {
         $this->sorting ="defult";
         $this->pagesize =12;
-        $this->fill(['message' => 'Hello World!']);
+        // $this->fill(['message' => 'Hello World!']);
     
 
     }
 
-    public function like()
-    {
-        $this->post =(auth()->user());
-    }
   
     public function store($product_id,$product_name,$regular_price){
 
@@ -47,9 +42,10 @@ class ShopComponent extends Component
         
 
     }
+    use WithPagination;
     public function render()
     {
-                    if ($this->sorting=='date') {
+                    if ($this->sorting == "date") {
                         
                         $products = Product::orderBy('created_at','DESC')->paginate($this->pagesize);
 
