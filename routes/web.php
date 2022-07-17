@@ -11,6 +11,7 @@ use App\Http\Livewire\TestComponent;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
+use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 
 /*
@@ -58,7 +59,9 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
+    Route::get('/admin/products',AdminProductComponent::class)->name('admin.products');
     Route::get('/admin/categories',AdminCategoryComponent::class)->name('admin.categories');
+    Route::get('/admin/categories/edit/{category_slug}',AdminCategoryComponent::class)->name('admin.admin.editcategories');
 
 });
 //for user and customer

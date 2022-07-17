@@ -22,6 +22,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css')}}">
+
+    <!-- admin dashboard cdns   -->
+    <script src="{{ asset('assets/adminvendor/jquery/jquery.js')}}"></script>
+    <link rel="stylesheet" href="{{ asset('assets/adminvendor/jquery-datatables-bs3/assets/css/datatables.css')}}" />
     @livewireStyles
 
 </head>
@@ -557,15 +561,25 @@
     </footer>
     
     
-    <script src="{{ asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
+    {{-- <script src="{{ asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script> --}}
     <script src="{{ asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
-    <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    {{-- <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script> --}}
     <script src="{{ asset('assets/js/jquery.flexslider.js')}}"></script>
-    <script src="{{ asset('assets/js/chosen.jquery.min.js')}}"></script>
+    {{-- <script src="{{ asset('assets/js/chosen.jquery.min.js')}}"></script> --}}
     <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.countdown.min.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.sticky.js')}}"></script>
     <script src="{{ asset('assets/js/functions.js')}}"></script>
+
+    {{-- <script src="{{ asset('assets/vendor/select2/select2.js')}}"></script> --}}
+    <script src="{{ asset('assets/adminvendor/jquery-datatables/media/js/jquery.dataTables.js')}}"></script>
+    <script src="{{ asset('assets/adminvendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js')}}"></script>
+    <script src="{{ asset('assets/adminvendor/jquery-datatables-bs3/assets/js/datatables.js')}}"></script>
+    <script src="{{ asset('assets/adminvendor/tables/examples.datatables.tabletools.js')}}"></script>
+
     @livewireScripts
 
 </body>
