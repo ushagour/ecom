@@ -1,4 +1,4 @@
-<section class="panel">
+{{-- <section class="panel">
     <header class="panel-heading">
 
         <h2 class="panel-title">All products</h2>
@@ -35,4 +35,31 @@
             </tbody>
         </table>
     </div>
+</section> --}}
+<section role="main" class="content-body">
+
+    <!-- start: page -->
+        <section class="panel">
+            <header class="panel-heading">
+        
+        
+                <h2 class="panel-title">Products</h2>
+            </header>
+            <div class="panel-body">
+                <table class="table table-bordered table-striped" id="datatable-ajax" data-url="http://localhost:8000/api/products">
+                    <thead>
+                        <tr>
+                           <th>Name</th>
+                           <th>Price</th>
+                           <th>Stock</th>
+                           <th>Category</th>
+                           <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    <!-- end: page -->
 </section>
