@@ -108,6 +108,9 @@
                                             <a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
                                         </li>
                                         <li class="menu-item">
+                                            <a title="products" href="{{route('admin.products')}}">Products</a>
+                                        </li>
+                                        <li class="menu-item">
                                             <a title="Categories" href="{{route('admin.categories')}}">Categories</a>
                                         </li>
 
@@ -573,12 +576,11 @@
     <script src="{{ asset('assets/js/jquery.countdown.min.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.sticky.js')}}"></script>
     <script src="{{ asset('assets/js/functions.js')}}"></script>
-
-    {{-- <script src="{{ asset('assets/vendor/select2/select2.js')}}"></script> --}}
+    <!-- admin dashboard cdns   -->
     <script src="{{ asset('assets/adminvendor/jquery-datatables/media/js/jquery.dataTables.js')}}"></script>
     <script src="{{ asset('assets/adminvendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js')}}"></script>
     <script src="{{ asset('assets/adminvendor/jquery-datatables-bs3/assets/js/datatables.js')}}"></script>
-    <script src="{{ asset('assets/adminvendor/tables/examples.datatables.tabletools.js')}}"></script>
+    <script src="{{ asset('assets/adminvendor/tables/examples.datatables.ajax.js')}}"></script>
 
     @livewireScripts
 
