@@ -12,6 +12,10 @@ class AdminCategoryComponent extends Component
 
     public $name;
     public $slug;
+    
+
+
+
     public function GenerateSlug(){
         $this->slug =str::slug($this->name);
 
@@ -23,13 +27,22 @@ class AdminCategoryComponent extends Component
         $category->slug = $this->slug;
         $category->save();
         session()->flash('success_info','category created succesfuly');
-        
-
     }
     
+
+    public function UpdateCategory($id)
+    {
+        
+        $category =Category::find($id)->first();
+        $category->name = $this->name;
+        $category->slug = $this->slug;
+        $category->update();
+
+    }
+
     public function render()
     {
       
-        return view('livewire.admin.admin-category-component',['categories'=>Category::paginate(6)])->layout("layouts.base");
+        return view('livewire.admin.admin-category-component',['categories'=>Category::paginate(30)])->layout("layouts.base");
     }
 }
