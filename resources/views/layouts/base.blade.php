@@ -580,7 +580,10 @@
     <script src="{{ asset('assets/adminvendor/jquery-datatables/media/js/jquery.dataTables.js')}}"></script>
     <script src="{{ asset('assets/adminvendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js')}}"></script>
     <script src="{{ asset('assets/adminvendor/jquery-datatables-bs3/assets/js/datatables.js')}}"></script>
-    <script src="{{ asset('assets/adminvendor/tables/examples.datatables.ajax.js')}}"></script>
+    <script src="{{ asset('assets/adminvendor/tables/examples.datatables.ajax.js')}}"></script>		
+    <script src="{{ asset('assets/js/spinner.js')}}"></script>
+    <script src="{{ asset('assets/adminvendor/form/examples.advanced.form.js')}}"></script>		
+
 
     @livewireScripts
 
