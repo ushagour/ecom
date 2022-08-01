@@ -11,6 +11,14 @@ class AdminProductComponent extends Component
 {
        use WithPagination;
  
+
+    public function DeleteProduct($id)
+    {   
+        $product = Product::find($id);
+        $product->delete();
+        session()->flash('success_info','product deleted');
+
+    }
     public function render()
     {
 

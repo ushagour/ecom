@@ -32,9 +32,6 @@ class EditProductComponenet extends Component
     {
         $product = Product::where("slug",$product_slug)->first();
             
-        // dd($product);
-
-
         $this->name = $product->name;
         $this->slug =$product->slug;
         $this->short_description =$product->short_description;
@@ -51,20 +48,20 @@ class EditProductComponenet extends Component
 
    
     }
-    public function GenerateSlug(){
-        $this->slug = str::slug($this->name);
+    // public function GenerateSlug(){
+    //     $this->slug = str::slug($this->name);
 
-    }
+    // }
 
 
     use WithFileUploads;
     public function UpdateProduct()
     {
-        $product = Product::find($this->product_id)->first();
+        $product = Product::find($this->product_id);
 
         $product->name=  $this->name; 
-        $product->slug=  str::slug($this->name);
-        $product->short_description=   $this->short_description;
+        $product->slug=  $this->slug;
+        $product->short_description=$this->short_description;
         $product->description=  $this->description; 
         $product->regular_price=  $this->regular_price; 
         $product->sale_price=   $this->sale_price;
@@ -74,18 +71,20 @@ class EditProductComponenet extends Component
         $product->quantity=  $this->quantity; 
 
         if ($this->newimage) {
-            # code...
+            
             $imageName = Carbon::now()->timestamp.".".$this->newimage->extension();
 
-            $this->image->storeAs("products",$imageName);
+            $this->newimage->storeAs('products',$imageName);
     
             $product->image=  $imageName;
         }
     
         $product->category_id=  $this->category_id;
 
+    
 
-         $product->update();
+        // dd($product);
+         $product->save();
      session()->flash('success_info','product updated  succesfuly');
 
     }

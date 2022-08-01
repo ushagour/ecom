@@ -33,9 +33,8 @@
                             <td class="center hidden-phone">{{$product->category->name}}</td>
                             <td>{{$product->created_at}}</td>
                             <td class="actions">
-                            
-                                <a href="{{route('edit.product',["product_slug"=>$product->slug])}}" class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-                                <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
+                                <a href="{{route('edit.product',["product_slug"=>$product->slug])}}" class="on-default edit-row lg"><i class="fa fa-pencil fa-2x text-primary"></i></a>
+                                <a  wire:click.prevent="DeleteProduct({{$product->id}})" class="on-default remove-row"><i class="fa fa-trash-o fa-2x text-danger"></i></a>
                             </td>                    
                             </tr>
                         @endforeach

@@ -12,19 +12,19 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="name" on>name</label>
                     <div class="col-md-6">
-                        <input type="text" class="form-control" id="name" wire:model="name" wire:keydown="GenerateSlug">
+                        <input type="text" class="form-control" id="name" wire:model="name">
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="slug">slug</label>
                     <div class="col-md-6">
-                        <input class="form-control" id="slug" type="text" wire:model="slug" disabled="">
+                        <input class="form-control" id="slug" type="text" wire:model="slug">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-3 control-label" for="short_description"> Short Description</label>
+                    <label class="col-md-3 control-label" for="short_description">Short Description</label>
                     <div class="col-md-6">
                         <input class="form-control" data-plugin-maxlength maxlength="20" id="short_description"
                             wire:model="short_description" />
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-3 control-label" for="short_description"> Description</label>
+                    <label class="col-md-3 control-label" for="short_description">Description</label>
                     <div class="col-md-6">
                         <textarea class="form-control" rows="3" data-plugin-maxlength maxlength="140"
                             wire:model="description"></textarea>
