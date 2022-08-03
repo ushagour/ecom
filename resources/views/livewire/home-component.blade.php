@@ -4,16 +4,20 @@
 			<!--MAIN SLIDE-->
 			<div class="wrap-main-slide">
 				<div class="slide-carousel owl-carousel style-nav-1" data-items="1" data-loop="1" data-nav="true" data-dots="false">
+					@foreach ($homesliders as  $homeslider)
 					<div class="item-slide">
-						<img src="{{ asset('assets/images/main-slider-1-1.jpg')}}" alt="" class="img-slide">
+						<img src="{{ asset('assets/images/slider').'/'.$homeslider->image}}" alt="{{$homeslider->title}}" class="img-slide">
 						<div class="slide-info slide-1">
-							<h2 class="f-title">Kid Smart <b>Watches</b></h2>
-							<span class="subtitle">Compra todos tus productos Smart por internet.</span>
-							<p class="sale-info">Only price: <span class="price">$59.99</span></p>
-							<a href="#" class="btn-link">Shop Now</a>
+							<h2 class="f-title">{{$homeslider->title}} <b>Watches</b></h2>
+							<span class="subtitle">{{$homeslider->subtitle}}.</span>
+							<p class="sale-info">Only price: <span class="price">{{$homeslider->price}}</span></p>
+							<a href="{{$homeslider->link}}" class="btn-link"> Shop Now</a>
 						</div>
 					</div>
-					<div class="item-slide">
+					@endforeach
+					
+				
+					{{-- <div class="item-slide">
 						<img src="{{ asset('assets/images/main-slider-1-2.jpg')}}" alt="" class="img-slide">
 						<div class="slide-info slide-2">
 							<h2 class="f-title">Extra 25% Off</h2>
@@ -31,7 +35,7 @@
 							<p class="sale-info">Stating at: <b class="price">$225.00</b></p>
 							<a href="#" class="btn-link">Shop Now</a>
 						</div>
-					</div>
+					</div> --}}
 				</div>
 			</div>
 

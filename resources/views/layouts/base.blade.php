@@ -113,6 +113,9 @@
                                         <li class="menu-item">
                                             <a title="Categories" href="{{route('admin.categories')}}">Categories</a>
                                         </li>
+                                        <li class="menu-item">
+                                            <a title="sliders" href="{{route('admin.sliders')}}">Manage Sliders</a>
+                                        </li>
 
 
                                         <li class="menu-item">

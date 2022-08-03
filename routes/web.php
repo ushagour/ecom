@@ -13,6 +13,9 @@ use App\Http\Livewire\Admin\AdminDashboardComponent;
 use App\Http\Livewire\Admin\AdminCategoryComponent;
 use App\Http\Livewire\Admin\AdminProductComponent;
 use App\Http\Livewire\Admin\AddProductComponent;
+use App\Http\Livewire\Admin\AdminHomeSliderComponent;
+use App\Http\Livewire\Admin\AddHomeSliderComponent;
+use App\Http\Livewire\Admin\EditHomeSliderComponent;
 use App\Http\Livewire\Admin\EditProductComponenet;
 use App\Http\Livewire\User\UserDashboardComponent;
 
@@ -64,6 +67,11 @@ Route::middleware([
     Route::get('/admin/products',AdminProductComponent::class)->name('admin.products');
     Route::get('/admin/add_product',AddProductComponent::class)->name('add.product');
     Route::get('/admin/product/edit/{product_slug}',EditProductComponenet::class)->name('edit.product');
+
+    Route::get('/admin/sliders',AdminHomeSliderComponent::class)->name('admin.sliders');
+    Route::get('/admin/add_sliders',AddHomeSliderComponent::class)->name('add.sliders');
+    Route::get('/admin/sliders/edit/{id}',EditHomeSliderComponent::class)->name('edit.sliders');
+    
     Route::get('/admin/categories',AdminCategoryComponent::class)->name('admin.categories');
     Route::get('/admin/categories/edit/{category_slug}',AdminCategoryComponent::class)->name('admin.admin.editcategories');
 
