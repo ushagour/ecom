@@ -4,12 +4,14 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\HomeSlider;
+use App\Models\Product;
 
 class HomeComponent extends Component
 {
     public function render()
     {
-        
-        return view('livewire.home-component',["homesliders" => HomeSlider::where("status",true)->get()])->layout('layouts.base');
+            $sliders =  HomeSlider::where("status",true)->get();
+            $Lproducts =  Product::orderBy("created_at","DESC")->get()->take(8);
+        return view('livewire.home-component',["homesliders" => $sliders,"Lproducts"=>$Lproducts])->layout('layouts.base');
     }
 }
