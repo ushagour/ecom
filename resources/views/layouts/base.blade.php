@@ -26,7 +26,9 @@
     <!-- admin dashboard cdns   -->
     <script src="{{ asset('assets/adminvendor/jquery/jquery.js')}}"></script>
     <link rel="stylesheet" href="{{ asset('assets/adminvendor/jquery-datatables-bs3/assets/css/datatables.css')}}" />
+    @stack('more_style')
     @livewireStyles
+
 
 </head>
 
@@ -115,6 +117,9 @@
                                         </li>
                                         <li class="menu-item">
                                             <a title="sliders" href="{{route('admin.sliders')}}">Manage Sliders</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a title="sliders" href="{{route('admin.home.categories')}}">Manage home categories</a>
                                         </li>
 
 
@@ -588,7 +593,10 @@
     <script src="{{ asset('assets/adminvendor/form/examples.advanced.form.js')}}"></script>		
 
 
+    @stack("more_scripts")
     @livewireScripts
+
+    
 
 </body>
 
