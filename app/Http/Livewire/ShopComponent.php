@@ -14,8 +14,10 @@ use Cart;
 class ShopComponent extends Component
 {
 
-    // public $sorting;
-    // public $pagesize;
+    public $sorting;
+    public $pagesize;
+    public $max_price;
+    public $min_price;
   
  
    
@@ -27,7 +29,8 @@ class ShopComponent extends Component
     {
         $this->sorting ="defult";
         $this->pagesize =12;
-        // $this->fill(['message' => 'Hello World!']);
+        $this->max_price = 1000;
+        $this->min_price = 1;
     
 
     }
@@ -47,18 +50,18 @@ class ShopComponent extends Component
     {
                     if ($this->sorting == "date") {
                         
-                        $products = Product::orderBy('created_at','DESC')->paginate($this->pagesize);
+                        $products = Product::whereBetween("regular_price",[$this->min_price,$this->max_price])->orderBy('created_at','DESC')->paginate($this->pagesize);
 
                     }else if ($this->sorting =="price") {
-                        $products = Product::orderBy('regular_price','ASC')->paginate($this->pagesize);
+                        $products = Product::whereBetween("regular_price",[$this->min_price,$this->max_price])->sorderBy('regular_price','ASC')->paginate($this->pagesize);
 
                     }else if($this->sorting =="price-desc")
                     {
-                        $products = Product::orderBy('regular_price','DESC')->paginate($this->pagesize);
+                        $products = Product::whereBetween("regular_price",[$this->min_price,$this->max_price])->sorderBy('regular_price','DESC')->paginate($this->pagesize);
 
                     }else 
                     {
-                        $products = Product::paginate($this->pagesize);
+                        $products = Product::whereBetween("regular_price",[$this->min_price,$this->max_price])->paginate($this->pagesize);
 
                     }
         return view('livewire.shop-component',['products'=>$products,'categories'=>Category::all()])->layout("layouts.base");
