@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 use App\Models\Product;
 use Livewire\Component;
 use Livewire\WithPagination;
+use App\Models\Sale;
 
 use Cart;
 
@@ -29,8 +30,10 @@ class DetailsComponent extends Component
     {
         $product = Product::where('slug',$this->slug)->first();
         $popular_products = Product::inRandomOrder()->limit(4)->get();
+        $Sale =  Sale::where("status",1)->first(); 
+
         $related_products = Product::where('category_id',$product->category_id)->inRandomOrder()->limit(5)->get();
-        return view('livewire.details-component',['product'=>$product,'popular_products'=>$popular_products,'related_products'=>$related_products])->layout('layouts.base');
+        return view('livewire.details-component',['product'=>$product,'popular_products'=>$popular_products,'related_products'=>$related_products,"Sale"=>$Sale])->layout('layouts.base');
     }
   
 }

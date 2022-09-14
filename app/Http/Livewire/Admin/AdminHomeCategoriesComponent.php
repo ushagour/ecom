@@ -4,21 +4,33 @@ namespace App\Http\Livewire\Admin;
 
 use Livewire\Component;
 use App\Models\Category;
+use App\Models\HomeCategory;
 
 class AdminHomeCategoriesComponent extends Component
 {
 
-    public $sel_categories=[];
+    public $selected_categories=[];
     public $no_of_products;
  
-public function mount()
-{
-    $this->sel_categories = $sel_categories;
-    $this->no_of_products = $no_of_products;
-}
-    public function add()
+
+    public function mount()
     {
-        echo "test";
+
+        $homecategory = HomeCategory::find(1);
+        $this->selected_categories= explode(',',$homecategory->sel_categories); // explode  php function generate a array  from string  splited by ","
+        $this->no_of_products = $homecategory->no_of_products;
+
+    }
+    public function updatecat()
+    {
+
+        $homecategory = HomeCategory::find(1);
+        $homecategory->sel_categories = implode(',',$this->selected_categories); // implode php function generate a string splited by ","
+        $homecategory->no_of_products = $this->no_of_products;
+        $homecategory->save();
+        session()->flash('success_info','items updated succesfuly');
+
+
     }
     public function render()
     {

@@ -26,6 +26,8 @@
     <!-- admin dashboard cdns   -->
     <script src="{{ asset('assets/adminvendor/jquery/jquery.js')}}"></script>
     <link rel="stylesheet" href="{{ asset('assets/adminvendor/jquery-datatables-bs3/assets/css/datatables.css')}}" />
+
+
     @stack('more_style')
     @livewireStyles
 
@@ -117,6 +119,9 @@
                                         </li>
                                         <li class="menu-item">
                                             <a title="sliders" href="{{route('admin.sliders')}}">Manage Sliders</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a title="sliders" href="{{route('admin.OnSale')}}">Manage onSale Timer </a>
                                         </li>
                                         <li class="menu-item">
                                             <a title="sliders" href="{{route('admin.home.categories')}}">Manage home categories</a>
@@ -591,6 +596,8 @@
     <script src="{{ asset('assets/adminvendor/tables/examples.datatables.ajax.js')}}"></script>		
     <script src="{{ asset('assets/js/spinner.js')}}"></script>
     <script src="{{ asset('assets/adminvendor/form/examples.advanced.form.js')}}"></script>		
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
+    <script src="{{ asset('assets/adminvendor/bootstrap-timepicker/js/bootstrap-timepicker.js')}}"></script>
 
 
     @stack("more_scripts")

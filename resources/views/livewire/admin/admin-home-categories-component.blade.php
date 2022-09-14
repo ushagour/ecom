@@ -1,6 +1,5 @@
 @push('more_style')
-<link rel="stylesheet" href="{{ asset('assets/adminvendor/select2/select2.css')}}" />
-<link rel="stylesheet" href="{{ asset('assets/adminvendor/bootstrap-multiselect/bootstrap-multiselect.css')}}" />
+<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 @endpush
 
 <section class="panel">
@@ -10,11 +9,11 @@
     </header>
     <div class="panel-body">
         <form class="form-horizontal form-bordered form-bordered" method="POST"
-            wire:submit.prevent="add">
+            wire:submit.prevent="updatecat">
             <div class="form-group">
                 <label class="col-md-3 control-label" for="textareaDefault">chose Categories</label>
-                <div class="col-md-6">
-                    <select id="tags-input-multiple" multiple data-role="tagsinput" name="categories[]" wire:model="sel_categories" class="label label-primary form-control">
+                <div class="col-md-6" wire:ignore>
+                    <select id="multiple_categories" multiple data-role="tagsinput" name="categories[]" wire:model="selected_categories" class="form-control">
                        
                         @foreach($categories as $category)
                         <option value="{{$category->id}}">{{$category->name}}</option>
@@ -42,14 +41,21 @@
     </div>
 </section>
 @push('more_scripts')
+
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script><link rel="stylesheet" href="{{ asset('assets/adminvendor/bootstrap-multiselect/bootstrap-multiselect.css')}}" />
 <script>
     // Your JS here.
 $(document).ready(function(){
-$('#tags-input-multiple').select2();
+$('#multiple_categories').select2();
+$('#multiple_categories').on("change",function(e) {
+    
+    var data = $('#multiple_categories').val();
+    @this.set("selected_categories",data);
+});
+
+
 
 });
 
 </script>
-<script src="{{ asset('assets/adminvendor/select2/select2.js')}}"></script>
-<script src="{{ asset('assets/adminvendor/bootstrap-multiselect/bootstrap-multiselect.js')}}"></script>
 @endpush

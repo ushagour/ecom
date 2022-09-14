@@ -17,6 +17,7 @@ use App\Http\Livewire\Admin\AdminHomeSliderComponent;
 use App\Http\Livewire\Admin\AddHomeSliderComponent;
 use App\Http\Livewire\Admin\EditHomeSliderComponent;
 use App\Http\Livewire\Admin\EditProductComponenet;
+use App\Http\Livewire\Admin\AdminOnsaleComponent;
 use App\Http\Livewire\Admin\AdminHomeCategoriesComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 
@@ -77,6 +78,7 @@ Route::middleware([
     Route::get('/admin/categories/edit/{category_slug}',AdminCategoryComponent::class)->name('admin.admin.editcategories');
     
     Route::get('/admin/home-categories',AdminHomeCategoriesComponent::class)->name('admin.home.categories');
+    Route::get('/admin/OnSale',AdminOnsaleComponent::class)->name('admin.OnSale');
 
 });
 //for user and customer
