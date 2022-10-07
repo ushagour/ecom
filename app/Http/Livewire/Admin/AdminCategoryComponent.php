@@ -13,7 +13,10 @@ class AdminCategoryComponent extends Component
     public $name;
     public $slug;
     
-
+    protected $rules = [
+        'name'=>'required',
+        'slug'=>'required|unique:categories',
+    ];
 
 
     public function GenerateSlug(){
@@ -22,6 +25,8 @@ class AdminCategoryComponent extends Component
     }
     public function saveCategory()
     {
+        $this->validate();
+
         $category = new Category();
         $category->name = $this->name;
         $category->slug = $this->slug;

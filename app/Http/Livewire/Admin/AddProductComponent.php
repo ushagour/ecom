@@ -26,6 +26,22 @@ class AddProductComponent extends Component
     public $quantity;
     public $image;
     public $category_id;
+
+    protected $rules = [
+        "name"=>"required",
+        "slug"=>"required|unique:products",
+        "short_description"=>"min:44",
+        "description"=>"required",
+        "regular_price"=>"required|numeric",
+        "sale_price"=>"required|numeric",
+        "SKU"=>"required",
+        "stock_status"=>"required",
+        "quantity"=>"required|numeric",
+        "image"=>"required|mimes:jpeg,png"//support just those types 
+    ];
+
+
+
     public function mount()
     {
         $this->stock_status="instock";
@@ -36,10 +52,27 @@ class AddProductComponent extends Component
 
     }
     use WithFileUploads;
-
+    public function updated($feldes)
+    {
+        $this->validateOnly($feldes,[
+            "name"=>"required",
+            "slug"=>"required|unique:products",
+            "short_description"=>"min:44",
+            "description"=>"required",
+            "regular_price"=>"required|numeric",
+            "sale_price"=>"required|numeric",
+            "SKU"=>"required",
+            "stock_status"=>"required",
+            "quantity"=>"required|numeric",
+            "image"=>"required|mimes:jpeg,png"//support just those types 
+        ]);
+    }
+ 
     public function save()
     {
 
+
+        $this->validate();
         $product = new Product();
      
             $product->name=  $this->name; 
@@ -63,7 +96,7 @@ class AddProductComponent extends Component
 
 
     }
-
+    
     public function render()
     {
 

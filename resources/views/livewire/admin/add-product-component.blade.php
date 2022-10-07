@@ -1,3 +1,19 @@
+
+@push("more_style")
+<style>
+    .validation_error{
+
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        font-family: Georgia, serif;
+            font-sise:14;
+        color: red;
+        border-radius: 5px;
+       border-color: #dc3545;
+    }
+</style>
+@endpush
 <div>
     <section class="panel">
 
@@ -8,7 +24,7 @@
         </div>
         @endif
         <div class="panel-body">
-            <form class="form-horizontal form-bordered" enctype="multipart/form-data" wire:submit="save">
+            <form class="form-horizontal form-bordered" enctype="multipart/form-data" wire:submit.prevent="save">
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="name" on>name</label>
                     <div class="col-md-6">
@@ -178,8 +194,20 @@
                         </div>
                     </div>
                 </div>
+<center>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    <br>
+    <ul>            
+        @foreach ($errors->all() as $error)
+            <li class="validation_error">{{ $error }}</li>
+        @endforeach
+    </ul>
+
+</center>
             </form>
         </div>
     </section>

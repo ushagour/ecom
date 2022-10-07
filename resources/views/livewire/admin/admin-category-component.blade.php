@@ -1,3 +1,12 @@
+
+@push("more_style")
+    <style>
+        .error{
+            color: red;
+
+        }
+    </style>
+@endpush
 <section class="panel">
     <header class="panel-heading">
 
@@ -17,8 +26,10 @@
                             <input class="form-control" data-plugin-maxlength maxlength="20" wire:model="name"
                                 wire:keydown="GenerateSlug" />
                             <p>
-                                <code>max-length</code> set to 20.
+                                <code>max-length</code> set to 20. @error('name') <span class="error">{{ $message }}</span> @enderror
+
                             </p>
+
                         </div>
                     </div>
                     <div class="form-group">
@@ -28,6 +39,8 @@
                             <p>
                                 <code>max-length</code> set to 20.
                             </p>
+                            @error('slug') <span class="error">{{ $message }}</span> @enderror
+
                         </div>
                     </div>
                     <div class="pull-right">
@@ -89,11 +102,15 @@
                                         
                                         <input type="text" class="col-md-6 form-control" maxlength="20"
                                         value="{{$category->name}}" />
+                                        @error('name') <span class="error">{{ $message }}</span> @enderror
+
                                       </div>
                                       <div class="form-group">
                                         <label class="col-md-3 control-label" >slug</label>
                                         <input type="text"class="col-md-6 form-control" maxlength="20"
                                         value="{{$category->slug}}" />
+                                        @error('slug') <span class="error">{{ $message }}</span> @enderror
+
                                       </div>
 
                            
