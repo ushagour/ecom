@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.1/nouislider.css')}}" />
 	@endpush
 	
+
 	<main id="main" class="main-site left-sidebar">
 
 		<div class="container">
@@ -40,7 +41,8 @@
 
 							<div class="sort-item product-per-page">
 								<select name="post-per-page" class="use-chosen" wire:model="pagesize" >
-									<option value="12" selected="selected">12 per page</option>
+									<op
+									tion value="12" selected="selected">12 per page</op>
 									<option value="16">16 per page</option>
 									<option value="18">18 per page</option>
 									<option value="21">21 per page</option>
@@ -59,11 +61,35 @@
 
 					</div><!--end wrap shop control-->
 
-				
+					<style>
+						.product-wish{
+							top:10%;
+							position: absolute;
+							left: 0;
+							z-index: 99;
+							right:30px;
+							text-align: right;
+							padding-top: 0;
+						}
+						.product-wish .fa{
+							color: gray;
+							font-size: 23px;
+						}
+						.product-wish .fa:hover{
+							color: red;
+						}
+						.product-wish .fa.full-heart{
+							color: red;
+						}
+			
+					</style>
 				 
 					<div class="row">
 
 						<ul class="product-list grid-products equal-container">
+							@php
+								$items = Cart::instance("wishlist")->content()->pluck("id"); // return object of instance wishlist 
+							@endphp
 							@foreach($products as $product)
 							<li class="col-lg-4 col-md-6 col-sm-6 col-xs-6 ">
 								<div class="product product-style-3 equal-elem ">
@@ -76,7 +102,18 @@
 										<a href="#" class="product-name"><span>{{$product->name}}</span></a>
 										<div class="wrap-price"><span class="product-price">${{$product->regular_price}}</span></div>
 										<a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add To Cart</a>
-
+										<div class="product-wish">
+											@if ($items->contains($product->id))									
+											<a href="#">
+												<i class="fa fa-heart full-heart" ></i>
+											</a>
+											@else
+											<a href="#" wire:click.prevent="addToCart({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">
+												<i class="fa fa-heart" ></i>
+											</a>
+											@endif
+										
+										</div>
 									</div>
 								</div>
 							</li>

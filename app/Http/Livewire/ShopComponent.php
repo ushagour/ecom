@@ -35,6 +35,11 @@ class ShopComponent extends Component
 
     }
 
+
+    public function addToCart($product_id,$product_name,$regular_price)
+    {
+        Cart::instance("wishlist")->add($product_id,$product_name,1,$regular_price)->associate("App\models\Product");//3ALAHC ASSOCIATE?
+    }
   
     public function store($product_id,$product_name,$regular_price){
 

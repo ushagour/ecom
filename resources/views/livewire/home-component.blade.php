@@ -78,7 +78,7 @@
 						</div>
 					</div> --}}
 
-				 <div class="product product-style-2 equal-elem ">
+				 <div class="product product-style-2 equal-elem">
 						<div class="product-thumnail">
 							<a href="{{route('product.details',['slug'=>$sProduct->slug])}}" title="{{$sProduct->name}}">
 								<figure><img src="{{ asset('assets/images/products')}}/{{$sProduct->image}}" width="800" height="800" alt="{{$sProduct->name}}"></figure>

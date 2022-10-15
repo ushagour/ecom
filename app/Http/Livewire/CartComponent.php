@@ -16,7 +16,7 @@ class CartComponent extends Component
     {
         $product = Cart::get($id);
         $qty = $product->qty +1;
-        Cart::update($id,$qty);
+        Cart::instance("cart")->update($id,$qty);
 
 
     }
@@ -26,14 +26,14 @@ class CartComponent extends Component
     {
         $product = Cart::get($id);
         $qty = $product->qty -1;
-        Cart::update($id,$qty);
+        Cart::instance("cart")->update($id,$qty);
 
     }
     public function destroy($id)
 
     {
-        $product = Cart::get($id);
-        Cart::remove($id);
+        $product = Cart::instance("cart")->get($id);
+        Cart::instance("cart")->remove($id);
         session()->flash('success_info','item deleted succesfuly');
 
     }
@@ -41,12 +41,7 @@ class CartComponent extends Component
 
     {
       
-        Cart::destroy();
-
-    }
-    public function test()
-    {
-        session()->flash('success_info','item  test  session data ');
+        Cart::instance("cart")->destroy();
 
     }
     public function render()
