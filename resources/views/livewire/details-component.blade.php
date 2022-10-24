@@ -64,9 +64,9 @@
 							<div class="wrap-butons">
 
 								@if ($product->sale_price &&  $Sale->status == 1 && $Sale->sale_date > Carbon\carbon::now())
-								<a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->sale_price}})">Add To Cart</a>
+								<a href="#" class="btn add-to-cart" wire:click.prevent="addToCart({{$product->id}},'{{$product->name}}',{{$product->sale_price}})">Add To Cart</a>
 								@else
-								<a href="#" class="btn add-to-cart" wire:click.prevent="store({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add To Cart</a>
+								<a href="#" class="btn add-to-cart" wire:click.prevent="addToCart({{$product->id}},'{{$product->name}}',{{$product->regular_price}})">Add To Cart</a>
 
 								@endif
                                 <div class="wrap-btn">

@@ -36,16 +36,19 @@ class ShopComponent extends Component
     }
 
 
-    public function addToCart($product_id,$product_name,$regular_price)
+    public function addToWishList($product_id,$product_name,$regular_price)
     {
         Cart::instance("wishlist")->add($product_id,$product_name,1,$regular_price)->associate("App\models\Product");//3ALAHC ASSOCIATE?
+        $this->emitTo('wishlist-component','refreshComponent');
+   
     }
   
-    public function store($product_id,$product_name,$regular_price){
+    public function addToCart($product_id,$product_name,$regular_price){
 
        
-         Cart::add($product_id,$product_name,1,$regular_price)->associate('App\Models\Product');//frre9 biin Prodcut::class w app/model /
+         Cart::instance("cart")->add($product_id,$product_name,1,$regular_price)->associate('App\Models\Product');//frre9 biin Prodcut::class w app/model /
         Session()->flash('success_info','item added to cart');
+
         return redirect()->route('product.cart');//returniih  l page dyal cart 
         
 
