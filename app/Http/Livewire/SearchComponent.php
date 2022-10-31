@@ -22,6 +22,9 @@ class SearchComponent extends Component
     public $search;
     public $product_cat;
     public $product_cat_id;
+    public $max_price;
+    public $min_price;
+    
 
 
  
@@ -30,17 +33,27 @@ class SearchComponent extends Component
     {
         $this->sorting ="defult";
         $this->pagesize =12;
+        $this->max_price = 1000;
+        $this->min_price = 1;
         $this->fill(request()->only('search','product_cat','product_cat_id')); 
 
     }
 
 
   
-    public function store($product_id,$product_name,$regular_price){
+    public function addToWishList($product_id,$product_name,$regular_price)
+    {
+        Cart::instance("wishlist")->add($product_id,$product_name,1,$regular_price)->associate("App\models\Product");//3ALAHC ASSOCIATE?
+        $this->emitTo('wishlist-component','refreshComponent');
+   
+    }
+  
+    public function addToCart($product_id,$product_name,$regular_price){
 
        
-         Cart::add($product_id,$product_name,1,$regular_price)->associate('App\Models\Product');//frre9 biin Prodcut::class w app/model /
+         Cart::instance("cart")->add($product_id,$product_name,1,$regular_price)->associate('App\Models\Product');//frre9 biin Prodcut::class w app/model /
         Session()->flash('success_info','item added to cart');
+
         return redirect()->route('product.cart');//returniih  l page dyal cart 
         
 
