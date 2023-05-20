@@ -39,7 +39,7 @@ class ShopComponent extends Component
     public function addToWishList($product_id,$product_name,$regular_price)
     {
         Cart::instance("wishlist")->add($product_id,$product_name,1,$regular_price)->associate("App\models\Product");//3ALAHC ASSOCIATE?
-        $this->emitTo('wishlist-component','refreshComponent');
+        $this->emitTo('wishlist-count-component','refreshComponent');
    
     }
   
@@ -49,7 +49,7 @@ class ShopComponent extends Component
 
             if ($item->id == $product_id) {
                 Cart::instance("wishlist")->remove($item->rowId);
-                $this->emitTo('wishlist-component','refreshComponent');
+                $this->emitTo('wishlist-count-component','refreshComponent');
 
             }
         }

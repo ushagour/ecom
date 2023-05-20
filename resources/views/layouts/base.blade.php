@@ -193,7 +193,7 @@
 
                         <div class="wrap-icon right-section">
                     
-                    @livewire("wishlist-component")
+                    @livewire("wishlist-count-component")
                     @livewire("cart-count-component")
 
 
