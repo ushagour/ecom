@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use \DateTimeInterface;
-class Sale extends Model
+class Transaction extends Model
 {
-    protected $table ="sales";
     use SoftDeletes, HasFactory;
 
-    
+    protected $table ="transactions";
+
     protected $dates = [
         'created_at',
         'updated_at',
@@ -19,17 +19,9 @@ class Sale extends Model
     ];
 
     protected $fillable = [
+        'mode',
+        'status',
         'order_id',
-        'firstName',
-        'lastName',
-        'mobile',
-        'email',
-        'line',
-        'line1',
-        'city',
-        'province',
-        'country',
-        'zipcode',     
         'created_at',
         'updated_at',
         'deleted_at'
@@ -39,7 +31,4 @@ class Sale extends Model
         return $date->format('Y-m-d H:i:s');
     }
 
-    
-
 }
-

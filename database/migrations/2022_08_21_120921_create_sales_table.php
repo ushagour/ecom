@@ -17,6 +17,7 @@ class CreateSalesTable extends Migration
             $table->id();
             $table->dateTime("sale_date");
             $table->boolean("status");
+            $table->softDeletes();
             $table->timestamps();
         });
     }

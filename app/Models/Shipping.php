@@ -6,11 +6,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use \DateTimeInterface;
-class Sale extends Model
+class Shipping extends Model
 {
-    protected $table ="sales";
     use SoftDeletes, HasFactory;
-
+    protected $table ="shippings";
     
     protected $dates = [
         'created_at',
@@ -41,5 +40,5 @@ class Sale extends Model
 
     
 
-}
 
+}
