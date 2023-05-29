@@ -30,5 +30,9 @@ class Transaction extends Model
     {
         return $date->format('Y-m-d H:i:s');
     }
+    public function Ordre()
+    {
+        return $this->belongsTo(Ordre::class);
+    }
 
 }

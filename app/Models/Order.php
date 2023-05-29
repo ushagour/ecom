@@ -41,5 +41,18 @@ class Order extends Model
   {
       return $date->format('Y-m-d H:i:s');
   }
+  public function ordreItems()
+  {
+      return $this->HasMany(OrderItem::class);
+  }
+  public function Shipping()
+  {
+      return $this->HasOne(Shipping::class);
+  }
+  public function Transaction()
+  {
+      return $this->HasOne(Transaction::class);
+  }
+
 
 }
