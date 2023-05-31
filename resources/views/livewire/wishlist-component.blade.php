@@ -5,8 +5,8 @@
 
 			<div class="wrap-breadcrumb">
 				<ul>
-					<li class="item-link"><a href="#" class="link">home</a></li>
-					<li class="item-link"><span>Digital & Electronics</span></li>
+					<li class="item-link"><a href="/" class="link">home</a></li>
+					<li class="item-link"><span>Wishlist</span></li>
 				</ul>
 			</div>
 

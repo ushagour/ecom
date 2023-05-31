@@ -1589,7 +1589,7 @@ li.menu-item .nav-label.sale-label::before{
     width: 100%;
     /*float: left;*/
     text-align: left;
-    background-color: #ff2832;
+    background-color: #9f1a4e;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 700;
@@ -1771,12 +1771,12 @@ li.menu-item .nav-label.sale-label::before{
     border-left-color: #365db5;
 }
 .product .product-thumnail .group-flash .flash-item.sale-label{
-    background-color: #ff2832;
+    background-color: #9f1a4e;
     margin-left: 8px;
 }
 .product .product-thumnail .group-flash .flash-item.sale-label::before{
-    border-top-color: #ff2832;
-    border-left-color: #ff2832;
+    border-top-color: #9f1a4e;
+    border-left-color: #9f1a4e;
 }
 .product .product-info .product-name span,
 .product-style-2 .product-info .product-name span{
@@ -1845,7 +1845,7 @@ li.menu-item .nav-label.sale-label::before{
 .product .product-info .wrap-price ins>p,
 .product-style-2 .product-info .wrap-price ins>p{
     font-weight: 600;
-    color: #ff2832;
+    color: #9f1a4e;
     text-align: left;
     padding-right: 8px;
 }
@@ -5592,10 +5592,7 @@ table.shop_attributes tbody{
     -o-transform: scale(1.1);
     transform: scale(1.1);
 }
-.wrap-footer-item .wrap-hotline-footer .phone-number,
-.topbar-menu-area .topbar-menu .label-before.fa-mobile{
-    color: #ff2832 !important;
-}
+
 .fill-color .header-nav-section ul li a{
     color: #ffffff;
 }
