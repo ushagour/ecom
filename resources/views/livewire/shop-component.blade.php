@@ -124,13 +124,8 @@
 					</div>
 			
 					<div class="wrap-pagination-info">
-						<ul class="page-numbers">
-					   {{$products->links()}}
-							{{-- <li><span class="page-number-item current" >1</span></li>
-							<li><a class="page-number-item" href="#" >2</a></li>
-							<li><a class="page-number-item" href="#" >3</a></li>
-							<li><a class="page-number-item next-link" href="#" >Next</a></li> --}}
-						</ul>
+						{{$products->links('vendor.pagination.custom')}}
+					
 					</div>
 				</div><!--end main products area-->
 

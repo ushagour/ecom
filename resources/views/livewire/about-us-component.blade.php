@@ -32,25 +32,35 @@
 				</div>
 
 				<div class="row equal-container">
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<div class="aboutus-box-score equal-elem ">
-							<b class="box-score-title">10000</b>
-							<span class="sub-title">Items in Store</span>
-							<p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s...</p>
+							<b class="box-score-title">150+</b>
+							
+
+							<span class="sub-title">Clients satisfaits</span>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<div class="aboutus-box-score equal-elem ">
-							<b class="box-score-title">90%</b>
-							<span class="sub-title">Our Customers comeback</span>
-							<p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s...</p>
+							<b class="box-score-title">15+</b>
+							<span class="sub-title">Années d'expérience</span>
 						</div>
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<div class="aboutus-box-score equal-elem ">
-							<b class="box-score-title">2 million</b>
-							<span class="sub-title">User of the site</span>
-							<p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the dummy text ever since the 1500s...</p>
+							
+
+							<b class="box-score-title">23</b>
+							<span class="sub-title">Villes aménagées</span>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+						<div class="aboutus-box-score equal-elem ">
+							
+							
+							
+							<b class="box-score-title">178+</b>
+							<span class="sub-title">Projets réussis en 2022</span>
 						</div>
 					</div>
 				</div>
@@ -59,24 +69,25 @@
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 						<div class="aboutus-info style-small-left">
-							<b class="box-title">What we really do?</b>
-							<p class="txt-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+							<b class="box-title">Vision futuriste</b>
+							<p class="txt-content">
+								A l’instar du design et la créativité, Aklim Group veille sur la révolution technologique afin d’adapter son offre aux besoins évolutifs et aux nouveaux défis économiques, sociaux et environnementaux. La vision futuriste du groupe, consiste à favoriser l’interaction grâce à un mobilier urbain à la fois esthétique et moderne, en intégrant les fonctionnalités technologiques, pour s’ouvrir à des nouvelles formes de designs et d’expériences urbaines interactives en conservant l’aspect pratique. Nous souhaitons dynamiser les espaces publics pour combler les attentes des usagers dans cette nouvelle ère technologique</p>
 						</div>
 						<div class="aboutus-info style-small-left">
-							<b class="box-title">History of the Company</b>
-							<p class="txt-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
+							<b class="box-title">Aires de jeux</b>
+							<p class="txt-content">Rencontres et de divertissement
+								Les aires de jeux sont devenues des espaces indispensables à la ville représentant ainsi des espaces de rencontres et de divertissement pour les enfants et les adultes, ainsi leur aménagement représente un enjeu important pour les villes.,</p>
 						</div>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+					
 						<div class="aboutus-info style-small-left">
-							<b class="box-title">Our Vision</b>
-							<p class="txt-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
-						</div>
-						<div class="aboutus-info style-small-left">
-							<b class="box-title">Cooperate with Us!</b>
-							<p class="txt-content">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,</p>
-						</div>
+							<b class="box-title">Mobilier Urbain</b>
+							Aménagement des espaces urbains
+							<p class="txt-content">L’aménagement des espaces urbains consiste à améliorer le confort, la sécurité des usagers dans un environnement public comme les municipalités, les espaces-verts, zones urbaines, ou encore les places publiques ou privés.
+						</p>
+							</div>
 					</div>
 
 					<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">

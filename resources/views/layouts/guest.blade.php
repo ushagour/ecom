@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico')}}">
+    <title>Aklim</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png')}}">
     <link
         href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext"
         rel="stylesheet">
@@ -21,6 +21,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css')}}">
 </head>
+
 
 <body class="home-page home-01 ">
 
@@ -41,12 +42,13 @@
                         <div class="topbar-menu left-menu">
                             <ul>
                                 <li class="menu-item">
-                                    <a title="Hotline: (+123) 456 789" href="#"><span
-                                            class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+                                    <a title="Hotline: (+212) -661 1002 72 " href="#"><span
+                                            class="icon label-before fa fa-mobile"></span>Hotline: (+212) -661 1002 72 </a>
                                 </li>
                             </ul>
                         </div>
                         <div class="topbar-menu right-menu">
+                                <center><h3><span>Nos références</span></h3></center>
                             <ul>
 
                                 <li class="menu-item lang-menu menu-item-has-children parent">
@@ -231,16 +233,13 @@
                     <div class="header-nav-section">
                         <div class="container">
                             <ul class="nav menu-nav clone-main-menu" id="mercado_haead_menu" data-menuname="Sale Info">
-                                <li class="menu-item"><a href="#" class="link-term">Weekly Featured</a><span
+                                <li class="menu-item"><a href="#" class="link-term">Conformité</a><span
                                         class="nav-label hot-label">hot</span></li>
-                                <li class="menu-item"><a href="#" class="link-term">Hot Sale items</a><span
+                                <li class="menu-item"><a href="#" class="link-term">Qualité</a><span
                                         class="nav-label hot-label">hot</span></li>
-                                <li class="menu-item"><a href="#" class="link-term">Top new items</a><span
+                                <li class="menu-item"><a href="#" class="link-term">Service apre vente </a><span
                                         class="nav-label hot-label">hot</span></li>
-                                <li class="menu-item"><a href="#" class="link-term">Top Selling</a><span
-                                        class="nav-label hot-label">hot</span></li>
-                                <li class="menu-item"><a href="#" class="link-term">Top rated items</a><span
-                                        class="nav-label hot-label">hot</span></li>
+                              
                             </ul>
                         </div>
                     </div>
@@ -332,16 +331,15 @@
                                         <ul>
                                             <li>
                                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                <p class="contact-txt">45 Grand Central Terminal New York,NY 1017 United
-                                                    State USA</p>
+                                                <p class="contact-txt">N° 13 cité Riad Al Andalous Imm 102 GH4 Prestigia Hay Riad Rabat</p>
                                             </li>
                                             <li>
                                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                                <p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+                                                <p class="contact-txt">(+212) -661 1002 72 - (+212) -661 1979 97</p>
                                             </li>
                                             <li>
                                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                <p class="contact-txt">Contact@yourcompany.com</p>
+                                                <p class="contact-txt">contact@aklim.ma</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -385,10 +383,8 @@
                                             <ul>
                                                 <li class="menu-item"><a href="#" class="link-term">My Account</a></li>
                                                 <li class="menu-item"><a href="#" class="link-term">Brands</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term">Gift
-                                                        Certificates</a></li>
                                                 <li class="menu-item"><a href="#" class="link-term">Affiliates</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term">Wish list</a></li>
+                                                <li class="menu-item"><a href="{{route("wishlist")}}" class="link-term">Wish list</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -398,7 +394,7 @@
                                     <div class="item-content">
                                         <div class="wrap-vertical-nav">
                                             <ul>
-                                                <li class="menu-item"><a href="#" class="link-term">Contact Us</a></li>
+                                                <li class="menu-item"><a href="{{route("contact.us")}}" class="link-term">Contact Us</a></li>
                                                 <li class="menu-item"><a href="#" class="link-term">Returns</a></li>
                                                 <li class="menu-item"><a href="#" class="link-term">Site Map</a></li>
                                                 <li class="menu-item"><a href="#" class="link-term">Specials</a></li>
@@ -432,7 +428,7 @@
                                 <div class="item-content">
                                     <div class="wrap-list-item social-network">
                                         <ul>
-                                            <li><a href="#" class="link-to-item" title="twitter"><i
+                                            <li><a href="#" class="link-to-item" title="whatsapp"><i
                                                         class="fa fa-twitter" aria-hidden="true"></i></a></li>
                                             <li><a href="#" class="link-to-item" title="facebook"><i
                                                         class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -440,8 +436,7 @@
                                                         class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                                             <li><a href="#" class="link-to-item" title="instagram"><i
                                                         class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                            <li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo"
-                                                        aria-hidden="true"></i></a></li>
+                                    
                                         </ul>
                                     </div>
                                 </div>
@@ -558,7 +553,7 @@
                     <div class="coppy-right-item item-right">
                         <div class="wrap-nav horizontal-nav">
                             <ul>
-                                <li class="menu-item"><a href="about-us.html" class="link-term">About us</a></li>
+                                <li class="menu-item"><a href="/about-us" class="link-term">About us</a></li>
                                 <li class="menu-item"><a href="privacy-policy.html" class="link-term">Privacy Policy</a>
                                 </li>
                                 <li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms &

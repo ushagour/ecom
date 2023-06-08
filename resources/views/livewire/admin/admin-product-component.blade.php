@@ -18,6 +18,7 @@
                    <th>Price</th>
                    <th>Stock</th>
                    <th>Category</th>
+                   <th>Sub categories</th>
                    <th>Date</th>
                    <th>Actions</th>
                 </tr>
@@ -31,6 +32,7 @@
                             <td>{{$product->regular_price}}</td>
                             <td>{{$product->stock_status}}</td>
                             <td class="center hidden-phone">{{$product->category->name}}</td>
+                            <td class="center hidden-phone">{{$product->category->subCategories}}</td>
                             <td>{{$product->created_at}}</td>
                             <td class="actions">
                                 <a href="{{route('edit.product',["product_slug"=>$product->slug])}}" class="on-default edit-row lg"><i class="fa fa-pencil fa-2x text-primary"></i></a>

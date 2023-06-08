@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.ico')}}">
+    <title>Aklim</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png')}}">
     <link
         href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext"
         rel="stylesheet">
@@ -30,6 +30,105 @@
 
     @stack('more_style')
     @livewireStyles
+    <style>
+        .elementor-image-gallery .gallery-item {
+            display: inline-block;
+            text-align: center;
+            vertical-align: top;
+            width: 100%;
+            max-width: 100%;
+            /* margin: 0 auto */
+            padding-bottom: 2%;
+        }
+
+        .elementor-image-gallery .gallery-item img {
+            margin: 0 auto
+        }
+
+        .elementor-image-gallery .gallery-item .gallery-caption {
+            margin: 0
+        }
+
+        .elementor-image-gallery figure img {
+            display: block
+        }
+
+        .elementor-image-gallery figure figcaption {
+            width: 100%
+        }
+
+        .gallery-spacing-custom .elementor-image-gallery .gallery-icon {
+            padding: 0
+        }
+
+        @media (min-width:768px) {
+            .elementor-image-gallery .gallery-columns-2 .gallery-item {
+                max-width: 50%
+            }
+
+            .elementor-image-gallery .gallery-columns-3 .gallery-item {
+                max-width: 33.33%
+            }
+
+            .elementor-image-gallery .gallery-columns-4 .gallery-item {
+                max-width: 25%
+            }
+
+            .elementor-image-gallery .gallery-columns-5 .gallery-item {
+                max-width: 20%
+            }
+
+            .elementor-image-gallery .gallery-columns-6 .gallery-item {
+                max-width: 16.666%
+            }
+
+            .elementor-image-gallery .gallery-columns-7 .gallery-item {
+                max-width: 14.28%
+            }
+
+            .elementor-image-gallery .gallery-columns-8 .gallery-item {
+                max-width: 12.5%
+            }
+
+            .elementor-image-gallery .gallery-columns-9 .gallery-item {
+                max-width: 11.11%
+            }
+
+            .elementor-image-gallery .gallery-columns-10 .gallery-item {
+                max-width: 10%
+            }
+        }
+
+        @media (min-width:480px) and (max-width:767px) {
+
+            .elementor-image-gallery .gallery.gallery-columns-2 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-3 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-4 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-5 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-6 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-7 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-8 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-9 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-10 .gallery-item {
+                max-width: 50%
+            }
+        }
+
+        @media (max-width:479px) {
+
+            .elementor-image-gallery .gallery.gallery-columns-2 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-3 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-4 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-5 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-6 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-7 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-8 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-9 .gallery-item,
+            .elementor-image-gallery .gallery.gallery-columns-10 .gallery-item {
+                max-width: 100%
+            }
+        }
+        </style>
 
 
 </head>
@@ -53,8 +152,8 @@
                         <div class="topbar-menu left-menu">
                             <ul>
                                 <li class="menu-item">
-                                    <a title="Hotline: (+123) 456 789" href="#"><span
-                                            class="icon label-before fa fa-mobile"></span>Hotline: (+123) 456 789</a>
+                                    <a title="Hotline: (+212) -661 1002 72" href="#"><span
+                                            class="icon label-before fa fa-mobile"></span>Hotline: (+212) -661 1002 72</a>
                                 </li>
                             </ul>
                         </div>
@@ -116,6 +215,9 @@
                                         </li>
                                         <li class="menu-item">
                                             <a title="Categories" href="{{route('admin.categories')}}">Categories</a>
+                                        </li>
+                                        <li class="menu-item">
+                                            <a title="subCategories" href="{{route('admin.subCategories')}}">Sub Categories</a>
                                         </li>
                                         <li class="menu-item">
                                             <a title="sliders" href="{{route('admin.sliders')}}">Manage Sliders</a>
@@ -215,16 +317,15 @@
                     <div class="header-nav-section">
                         <div class="container">
                             <ul class="nav menu-nav clone-main-menu" id="mercado_haead_menu" data-menuname="Sale Info">
-                                <li class="menu-item"><a href="#" class="link-term">Weekly Featured</a><span
-                                        class="nav-label hot-label">hot</span></li>
-                                <li class="menu-item"><a href="#" class="link-term">Hot Sale items</a><span
-                                        class="nav-label hot-label">hot</span></li>
-                                <li class="menu-item"><a href="#" class="link-term">Top new items</a><span
-                                        class="nav-label hot-label">hot</span></li>
-                                <li class="menu-item"><a href="#" class="link-term">Top Selling</a><span
-                                        class="nav-label hot-label">hot</span></li>
-                                <li class="menu-item"><a href="#" class="link-term">Top rated items</a><span
-                                        class="nav-label hot-label">hot</span></li>
+                                <li class="menu-item"><a href="#" class="link-term">Conformité</a><span
+                                        class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
+                                <li class="menu-item"><a href="#" class="link-term">Qualité</a><span
+                                        class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
+                                <li class="menu-item"><a href="#" class="link-term">Service apre vente </a><span
+                                        class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
+                                <li class="menu-item"><a href="#" class="link-term">Un project ? Contacte nous !</a><span
+                                        class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
+                              
                             </ul>
                         </div>
                     </div>
@@ -261,46 +362,49 @@
     
         {{ $slot }}
     
+        
     <footer id="footer">
         <div class="wrap-footer-content footer-style-1">
 
             <div class="wrap-function-info">
-                <div class="container">
-                    <ul>
-                        <li class="fc-info-item">
-                            <i class="fa fa-truck" aria-hidden="true"></i>
-                            <div class="wrap-left-info">
-                                <h4 class="fc-name">Free Shipping</h4>
+                <div class="container-fluid">
+                    <center><h3><span>Nos références</span></h3></center>
 
-                                <p class="fc-desc">Free On Oder Over $99</p>
-                            </div>
-
-                        </li>
-                        <li class="fc-info-item">
-                            <i class="fa fa-recycle" aria-hidden="true"></i>
-                            <div class="wrap-left-info">
-                                <h4 class="fc-name">Guarantee</h4>
-                                <p class="fc-desc">30 Days Money Back</p>
-                            </div>
-
-                        </li>
-                        <li class="fc-info-item">
-                            <i class="fa fa-credit-card-alt" aria-hidden="true"></i>
-                            <div class="wrap-left-info">
-                                <h4 class="fc-name">Safe Payment</h4>
-                                <p class="fc-desc">Safe your online payment</p>
-                            </div>
-
-                        </li>
-                        <li class="fc-info-item">
-                            <i class="fa fa-life-ring" aria-hidden="true"></i>
-                            <div class="wrap-left-info">
-                                <h4 class="fc-name">Online Suport</h4>
-                                <p class="fc-desc">We Have Support 24/7</p>
-                            </div>
-
-                        </li>
-                    </ul>
+                    <div class="elementor-image-gallery">
+                        <div id="gallery-1" class="gallery galleryid-6 gallery-columns-10 gallery-size-full"><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/3.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/2.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/4.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/1.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/7.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/10.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/6.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/11.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/5.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure><figure class="gallery-item">
+                        <div class="gallery-icon landscape">
+                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/12.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                        </div></figure>
+                    </div>
+                    </div>
+                 
                 </div>
             </div>
             <!--End function info-->
@@ -319,16 +423,15 @@
                                         <ul>
                                             <li>
                                                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                                <p class="contact-txt">45 Grand Central Terminal New York,NY 1017 United
-                                                    State USA</p>
+                                                <p class="contact-txt">N° 13 cité Riad Al Andalous Imm 102 GH4 Prestigia Hay Riad Rabat</p>
                                             </li>
                                             <li>
                                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                                <p class="contact-txt">(+123) 456 789 - (+123) 666 888</p>
+                                                <p class="contact-txt">(+212) -661 1002 72 - (+212) -661 1979 97</p>
                                             </li>
                                             <li>
                                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                <p class="contact-txt">Contact@yourcompany.com</p>
+                                                <p class="contact-txt">contact@aklim.ma</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -338,15 +441,7 @@
 
                         <div class="col-lg-4 col-sm-4 col-md-4 col-xs-12">
 
-                            <div class="wrap-footer-item">
-                                <h3 class="item-header">Hot Line</h3>
-                                <div class="item-content">
-                                    <div class="wrap-hotline-footer">
-                                        <span class="desc">Call Us toll Free</span>
-                                        <b class="phone-number">(+123) 456 789 - (+123) 666 888</b>
-                                    </div>
-                                </div>
-                            </div>
+                        
 
                             <div class="wrap-footer-item footer-item-second">
                                 <h3 class="item-header">Sign up for newsletter</h3>
@@ -540,18 +635,18 @@
             <div class="coppy-right-box">
                 <div class="container">
                     <div class="coppy-right-item item-left">
-                        <p class="coppy-right-text">Copyright © 2020 Surfside Media. All rights reserved</p>
+                        <p class="coppy-right-text">Copyright © 2023 Aklim. All rights reserved</p>
                     </div>
                     <div class="coppy-right-item item-right">
                         <div class="wrap-nav horizontal-nav">
                             <ul>
-                                <li class="menu-item"><a href="about-us.html" class="link-term">About us</a></li>
-                                <li class="menu-item"><a href="privacy-policy.html" class="link-term">Privacy Policy</a>
+                                <li class="menu-item"><a href="/about" class="link-term">About us</a></li>
+                                {{-- <li class="menu-item"><a href="/privacy-policy" class="link-term">Privacy Policy</a>
                                 </li>
-                                <li class="menu-item"><a href="terms-conditions.html" class="link-term">Terms &
+                                <li class="menu-item"><a href="/terms-conditions" class="link-term">Terms &
                                         Conditions</a></li>
-                                <li class="menu-item"><a href="return-policy.html" class="link-term">Return Policy</a>
-                                </li>
+                                <li class="menu-item"><a href="/return-policy" class="link-term">Return Policy</a>
+                                </li> --}}
                             </ul>
                         </div>
                     </div>

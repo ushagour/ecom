@@ -20,6 +20,7 @@ use App\Http\Livewire\Admin\EditHomeSliderComponent;
 use App\Http\Livewire\Admin\EditProductComponenet;
 use App\Http\Livewire\Admin\AdminOnsaleComponent;
 use App\Http\Livewire\Admin\AdminHomeCategoriesComponent;
+use App\Http\Livewire\Admin\AdminSubCategoryComponent;
 use App\Http\Livewire\User\UserDashboardComponent;
 use App\Http\Livewire\AboutUsComponent;
 use App\Http\Livewire\ContactUsComponent;
@@ -44,7 +45,7 @@ Route::get('/cart',CartComponent::class)->name('product.cart');
 Route::get('/checkout',CheckoutComponent::class);
 Route::get('/shop',ShopComponent::class);
 Route::get('/about',AboutUsComponent::class);
-Route::get('/contact-us',ContactUsComponent::class);
+Route::get('/contact-us',ContactUsComponent::class)->name('contact.us');
 Route::get('/product/{slug}', DetailsComponent::class)->name('product.details');
 Route::get('/product-category/{category_slug}', CategoryComponent::class)->name('product.category');
 
@@ -81,6 +82,9 @@ Route::middleware([
     
     Route::get('/admin/categories',AdminCategoryComponent::class)->name('admin.categories');
     Route::get('/admin/categories/edit/{category_slug}',AdminCategoryComponent::class)->name('admin.admin.editcategories');
+    
+    Route::get('/admin/subCategories',AdminSubCategoryComponent::class)->name('admin.subCategories');
+    Route::get('/admin/subCategories/edit/{sub_category_slug}',AdminSubCategoryComponent::class)->name('admin.admin.editSubCategories');
     
     Route::get('/admin/home-categories',AdminHomeCategoriesComponent::class)->name('admin.home.categories');
     Route::get('/admin/OnSale',AdminOnsaleComponent::class)->name('admin.OnSale');

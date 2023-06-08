@@ -4,14 +4,18 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Category;
 
-class Category extends Model
+class SubCategory extends Model
 {
     use HasFactory;
-    // protected $table ="categories";
     protected $gurded=[];
-    public function SubCategories()
+    protected $table ="sub_categories";
+
+    
+
+    public function category()
     {
-        return $this->HasMany(SubCategory::class);
+        return $this->belongsTo(Category::class);
     }
 }
