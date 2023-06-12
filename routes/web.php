@@ -42,7 +42,7 @@ use App\Http\Livewire\ContactUsComponent;
 
 Route::get('/',HomeComponent::class);
 Route::get('/cart',CartComponent::class)->name('product.cart');
-Route::get('/checkout',CheckoutComponent::class);
+Route::get('/checkout',CheckoutComponent::class)->name('checkout');
 Route::get('/shop',ShopComponent::class);
 Route::get('/about',AboutUsComponent::class);
 Route::get('/contact-us',ContactUsComponent::class)->name('contact.us');

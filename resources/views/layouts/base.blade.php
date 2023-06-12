@@ -288,7 +288,7 @@
 
                         <div class="wrap-logo-top left-section">
                             {{-- #Todo :change the logo  nb logo whene you resize the page    --}}
-                            <a href="index.html" class="link-to-home" ><img height="50%" width="50%"
+                            <a href="/" class="link-to-home" ><img height="50%" width="50%"
                                     src="{{ asset('assets/images/logo-top-1.png')}}" alt="mercado"></a>
                         </div>
 
@@ -662,9 +662,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    {{-- <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script> --}}
+    <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.flexslider.js')}}"></script>
-    {{-- <script src="{{ asset('assets/js/chosen.jquery.min.js')}}"></script> --}}
+    <script src="{{ asset('assets/js/chosen.jquery.min.js')}}"></script>
     <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.countdown.min.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.sticky.js')}}"></script>
