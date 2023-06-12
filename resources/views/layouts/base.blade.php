@@ -152,8 +152,8 @@
                         <div class="topbar-menu left-menu">
                             <ul>
                                 <li class="menu-item">
-                                    <a title="Hotline: (+212) -661 1002 72" href="#"><span
-                                            class="icon label-before fa fa-mobile"></span>Hotline: (+212) -661 1002 72</a>
+                                    <a title="Hotline: (+212) -762 597772" href="#"><span
+                                            class="icon label-before fa fa-mobile"></span>Hotline: (+212) -762 597772</a>
                                 </li>
                             </ul>
                         </div>
@@ -427,11 +427,11 @@
                                             </li>
                                             <li>
                                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                                <p class="contact-txt">(+212) -661 1002 72 - (+212) -661 1979 97</p>
+                                                <p class="contact-txt">(+212) -762 597772- (+212) -762 597772</p>
                                             </li>
                                             <li>
                                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                <p class="contact-txt">contact@aklim.ma</p>
+                                                <p class="contact-txt">E-contact@Aklim.m</p>
                                             </li>
                                         </ul>
                                     </div>

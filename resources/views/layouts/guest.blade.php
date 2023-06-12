@@ -20,6 +20,44 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css')}}">
+    <style>
+        #button {
+      display: inline-block;
+      background-color: #FF9800;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      border-radius: 4px;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      transition: background-color .3s, 
+        opacity .5s, visibility .5s;
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+    #topcontrol::after {
+      content: "\f077";
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 2em;
+      line-height: 50px;
+      color: #fff;
+    }
+    #topcontrol:hover {
+      cursor: pointer;
+      background-color: #333;
+    }
+    #topcontrol:active {
+      background-color: #555;
+    }
+    #topcontrol.show {
+      opacity: 1;
+      visibility: visible;
+    }
+    </style>
 </head>
 
 
@@ -42,8 +80,8 @@
                         <div class="topbar-menu left-menu">
                             <ul>
                                 <li class="menu-item">
-                                    <a title="Hotline: (+212) -661 1002 72 " href="#"><span
-                                            class="icon label-before fa fa-mobile"></span>Hotline: (+212) -661 1002 72 </a>
+                                    <a title="Hotline: (+212) -762 597772" href="#"><span
+                                            class="icon label-before fa fa-mobile"></span>Hotline: (+212) -762 597772</a>
                                 </li>
                             </ul>
                         </div>
@@ -335,11 +373,11 @@
                                             </li>
                                             <li>
                                                 <i class="fa fa-phone" aria-hidden="true"></i>
-                                                <p class="contact-txt">(+212) -661 1002 72 - (+212) -661 1979 97</p>
+                                                <p class="contact-txt">(+212) -762 597772 - (+212) -762 597772</p>
                                             </li>
                                             <li>
                                                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                                                <p class="contact-txt">contact@aklim.ma</p>
+                                                <p class="contact-txt">E-contact@Aklim.m</p>
                                             </li>
                                         </ul>
                                     </div>
@@ -552,6 +590,8 @@
                     </div>
                     <div class="coppy-right-item item-right">
                         <div class="wrap-nav horizontal-nav">
+                            <a id="topcontrol"></a>
+
                             <ul>
                                 <li class="menu-item"><a href="/about-us" class="link-term">About us</a></li>
                                 <li class="menu-item"><a href="privacy-policy.html" class="link-term">Privacy Policy</a>
@@ -578,6 +618,23 @@
     <script src="{{ asset('assets/js/jquery.countdown.min.js')}}"></script>
     <script src="{{ asset('assets/js/jquery.sticky.js')}}"></script>
     <script src="{{ asset('assets/js/functions.js')}}"></script>
+    <script>
+        // Get the button
+        var btn = $('#topcontrol');
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() > 300) {
+    btn.addClass('show');
+  } else {
+    btn.removeClass('show');
+  }
+});
+
+btn.on('click', function(e) {
+  e.preventDefault();
+  $('html, body').animate({scrollTop:0}, '300');
+});
+    </script>
 </body>
 
 </html>
