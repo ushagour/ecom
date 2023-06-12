@@ -6,6 +6,7 @@ use Livewire\Component;
 use Livewire\WithPagination;
 use App\Models\Product;
 use Cart;
+use Auth;
 
 
 class CartComponent extends Component
@@ -21,6 +22,18 @@ class CartComponent extends Component
 
 
     }
+    public function checkout()
+    {
+            if(Auth::check())
+            {
+                return redirect()->route('checkout');
+            }
+            else
+            {
+                 return redirect()->route('login');
+            }
+    }
+
 
     public function decreasequantity($id)
 

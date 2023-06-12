@@ -50,10 +50,9 @@
                 <div class="product-info">
                     <a href="#" class="product-name"><span>{{$product->model->name}}</span></a>
                     <div class="wrap-price"><span class="product-price">${{$product->model->regular_price}}</span></div>
-                    <a href="#" class="btn add-to-cart" wire:click.prevent="addToCart({{$product->model->id}},'{{$product->model->name}}',{{$product->model->regular_price}})">Add To Cart</a>
+                    <a href="#" class="btn add-to-cart" wire:click.prevent="moveProductFromWishlistToCart('{{$product->rowId}}')">Move To Cart</a>
                     <div class="product-wish">
-                      
-                        <a href="#" wire:click.prevent="removeFromWishList({{$product->model->id}},'{{$product->model->name}}',{{$product->model->regular_price}})">
+                               <a href="#" wire:click.prevent="removeFromWishList({{$product->model->id}},'{{$product->model->name}}',{{$product->model->regular_price}})">
                             <i class="fa fa-heart full-heart" ></i>
                         </a>
                     </div>
