@@ -12,7 +12,7 @@ use Auth;
 class CartComponent extends Component
 {
 
-    public function increasequantity($id)
+    public function increaseQuantity($id)
 
     {
         $product = Cart::instance("cart")->get($id);
@@ -35,7 +35,7 @@ class CartComponent extends Component
     }
 
 
-    public function decreasequantity($id)
+    public function decreaseQuantity($id)
 
     {
         $product = Cart::instance("cart")->get($id);
@@ -54,7 +54,7 @@ class CartComponent extends Component
         $this->emitTo('cart-count-component','refreshComponent');
 
     }
-    public function clearAll()
+    public function destroyAll()
 
     {
       

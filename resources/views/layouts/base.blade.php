@@ -157,33 +157,30 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="topbar-menu right-menu">
-                            <ul>
+                    	<div class="topbar-menu right-menu">
+							<ul>
 
                                 <li class="menu-item lang-menu menu-item-has-children parent">
+                                
+
+                                    <a title="french" href="#"><span
+                                        class="img label-before"><img
+                                            src="{{ asset('assets/images/lang-fra.png')}}"
+                                            alt="lang-fre"></span>French</a>
+                            <ul class="submenu lang">
+                         
+                                <li class="menu-item"><a title="Maroc" href="#"><span class="img label-before"><img
+                                    src="{{ asset('assets/images/lang-ma.png')}}"
+                                    alt="lang-ar"></span>Maroc<i class="fa fa-angle-down"
+                                aria-hidden="true"></i></a></li>
+                                <li class="menu-item">
                                     <a title="English" href="#"><span class="img label-before"><img
-                                                src="{{ asset('assets/images/lang-en.png')}}"
-                                                alt="lang-en"></span>English<i class="fa fa-angle-down"
-                                            aria-hidden="true"></i></a>
-                                    <ul class="submenu lang">
-                                        <li class="menu-item"><a title="hungary" href="#"><span
-                                                    class="img label-before"><img
-                                                        src="{{ asset('assets/images/lang-hun.png')}}"
-                                                        alt="lang-hun"></span>Hungary</a></li>
-                                        <li class="menu-item"><a title="german" href="#"><span
-                                                    class="img label-before"><img
-                                                        src="{{ asset('assets/images/lang-ger.png')}}"
-                                                        alt="lang-ger"></span>German</a></li>
-                                        <li class="menu-item"><a title="french" href="#"><span
-                                                    class="img label-before"><img
-                                                        src="{{ asset('assets/images/lang-fra.png')}}"
-                                                        alt="lang-fre"></span>French</a></li>
-                                        <li class="menu-item"><a title="canada" href="#"><span
-                                                    class="img label-before"><img
-                                                        src="{{ asset('assets/images/lang-can.png')}}"
-                                                        alt="lang-can"></span>Canada</a></li>
-                                    </ul>
-                                </li>
+                                        src="{{ asset('assets/images/lang-en.png')}}"
+                                        alt="lang-en"></span>English<i class="fa fa-angle-down"
+                                    aria-hidden="true"></i></a>
+                                   </li>
+                            </ul>
+                        </li>
                                 <li class="menu-item menu-item-has-children parent">
                                     <a title="Dollar (USD)" href="#">Dollar (USD)<i class="fa fa-angle-down"
                                             aria-hidden="true"></i></a>
@@ -199,87 +196,83 @@
                                         </li>
                                     </ul>
                                 </li>
-
-                                @if(Route::has('login'))
-                                @auth
-                                @if(Auth::user()->utype =='ADM')
-                                <li class="menu-item menu-item-has-children parent">
-                                    <a title="Myaccount" href="#">My Account {{Auth::user()->name}} <i
-                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <ul class="submenu curency">
-                                        <li class="menu-item">
-                                            <a title="Dashboard" href="{{route('admin.dashboard')}}">Dashboard</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a title="products" href="{{route('admin.products')}}">Products</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a title="Categories" href="{{route('admin.categories')}}">Categories</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a title="subCategories" href="{{route('admin.subCategories')}}">Sub Categories</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a title="sliders" href="{{route('admin.sliders')}}">Manage Sliders</a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a title="sliders" href="{{route('admin.OnSale')}}">Manage onSale Timer </a>
-                                        </li>
-                                        <li class="menu-item">
-                                            <a title="sliders" href="{{route('admin.home.categories')}}">Manage home categories</a>
-                                        </li>
-
-
-                                        <li class="menu-item">
-
-                                            <a title="logout" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                                @csrf
-                                            </form>
-                                        </li>
-
-                                    </ul>
-                                </li>
-                                @else
-                                <li class="menu-item menu-item-has-children parent">
-                                    <a title="Myaccount" href="#">My Account {{Auth::user()->name}} <i
-                                            class="fa fa-angle-down" aria-hidden="true"></i></a>
-                                    <ul class="submenu curency">
-                                        <li class="menu-item">
-                                            <a title="Dashboard" href="{{route('user.dashboard')}}">Dashboard</a>
-                                        </li>
-
-                                        <li class="menu-item">
-
-                                            <a title="logout" onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                {{ __('Logout') }}
-                                            </a>
-
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                                @csrf
-                                            </form>
-                                            <!-- <a  href="{{route('logout')}}">logout</a> -->
-                                        </li>
-                                    </ul>
-                                </li>
-                                @endif
-                                <!--end test if admin or user-->
-
-                                @else
-                                <li class="menu-item"><a title="Register or Login" href="{{route('login')}}">Login</a>
-                                </li>
-                                <li class="menu-item"><a title="Register or Login"
-                                        href="{{route('register')}}">Register</a></li>
-                                @endauth
-                                <!--end test auth-->
-                                @endif
-                            </ul>
-                        </div>
+								@if (Route::has('login'))
+									@auth
+										@if (Auth::user()->utype === 'ADM')
+											<li class="menu-item menu-item-has-children parent" >
+												<p title="My Account">My Account ({{ Auth::user()->name }})<i class="fa fa-angle-down" aria-hidden="true"></i></p>
+												<ul class="submenu curency" >
+													<li class="menu-item">
+														<a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a>
+													</li>
+												
+													<li class="menu-item">
+														<a href="{{ route('admin.orders') }}" title="All Orders">All Orders</a>
+													</li>
+													<li class="menu-item">
+														<a href="{{ route('admin.products') }}" title="All Products">All Products</a>
+													</li>
+													<li class="menu-item">
+														<a href="" title="Attributes">Attributes</a>
+													</li>
+													<li class="menu-item">
+														<a href="{{ route('admin.categories') }}" title="Categories">Categories</a>
+													</li>
+													<li class="menu-item">
+														<a href="" title="Contact Message">Contact Message</a>
+													</li>
+													<li class="menu-item" >
+														<a href="{{ route('admin.dashboard') }}" title="Dashboard">Dashboard</a>
+													</li>
+													<li class="menu-item">
+														<a href="{{ route('admin.home.categories') }}" title="Manage Home Categories">Manage Home Categories</a>
+													</li>
+													<li class="menu-item">
+														<a href="{{ route('admin.sliders') }}" title="Manage Home Slider">Manage Home Slider</a>
+													</li>
+													<li class="menu-item">
+														<a href="{{ route('admin.OnSale') }}" title="Sale Setting">Sale Setting</a>
+													</li>
+													<li class="menu-item">
+														<a href="" title="Settings">Settings</a>
+													</li>
+													<form action="{{ route('logout') }}" method="POST" id="logout-form">
+														@csrf
+													</form>
+												</ul>
+											</li>
+										@else
+											<li class="menu-item menu-item-has-children parent" >
+												<a title="My Account" href="#">{{ Auth::user()->name }}<i class="fa fa-angle-down" aria-hidden="true"></i></a>
+												<ul class="submenu curency" >
+													<li class="menu-item" >
+														<a title="Dashboard" href="{{ route('user.dashboard') }}">Dashboard</a>
+													</li>
+													<li class="menu-item" >
+														<a title="My Orders" href="{{ route('user.orders') }}">My Orders</a>
+													</li>
+													<li class="menu-item" >
+														<a title="My Profile" href="{{ route('user.profile') }}">My Profile</a>
+													</li>
+													<li class="menu-item" >
+														<a title="Change Password" href="{{ route('user.changepassword') }}">Change Password</a>
+													</li>
+													<li class="menu-item">
+														<a href="{{ route('logout') }}" onclick="event.preventDefault();document.getElementById('logout-form').submit()">Logout</a>
+													</li>
+													<form action="{{ route('logout') }}" method="POST" id="logout-form">
+														@csrf
+													</form>
+												</ul>
+											</li>
+										@endif
+										@else
+											<li class="menu-item"><a title="Login" href="{{ route('login') }}">Login</a></li>
+											<li class="menu-item"><a title="Register" href="{{ route('register') }}">Register</a></li>
+									@endauth
+								@endif
+							</ul>
+						</div>
                     </div>
                 </div>
 
@@ -352,6 +345,9 @@
                                 <li class="menu-item">
                                     <a href="/contact-us" class="link-term mercado-item-title">Contact Us</a>
                                 </li>
+                                <li class="menu-item">
+                                    <a href="/cataloge" class="link-term mercado-item-title">Cataloge</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -371,36 +367,36 @@
                     <center><h3><span>Nos références</span></h3></center>
 
                     <div class="elementor-image-gallery">
-                        <div id="gallery-1" class="gallery galleryid-6 gallery-columns-10 gallery-size-full"><figure class="gallery-item">
+                        <div id="gallery-1" class="gallery galleryid-6 gallery-columns-10 gallery-size-sm"><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/3.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/3.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/2.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/2.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/4.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/4.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/1.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/1.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/7.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/7.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/10.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/10.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/6.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/6.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/11.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/11.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/5.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/5.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure><figure class="gallery-item">
                         <div class="gallery-icon landscape">
-                            <img width="202" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/12.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
+                            <img width="150" height="179" src="https://aklim.ma/wp-content/uploads/2023/05/12.jpg" class="attachment-full size-full" alt="" decoding="async" loading="lazy">
                         </div></figure>
                     </div>
                     </div>
@@ -514,16 +510,15 @@
                                 <div class="item-content">
                                     <div class="wrap-list-item social-network">
                                         <ul>
-                                            <li><a href="#" class="link-to-item" title="twitter"><i
-                                                        class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li><a href="#" class="link-to-item" title="whatsapp"><i
+                                                        class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                                             <li><a href="#" class="link-to-item" title="facebook"><i
                                                         class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                             <li><a href="#" class="link-to-item" title="pinterest"><i
                                                         class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                                             <li><a href="#" class="link-to-item" title="instagram"><i
                                                         class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                                            <li><a href="#" class="link-to-item" title="vimeo"><i class="fa fa-vimeo"
-                                                        aria-hidden="true"></i></a></li>
+                                    
                                         </ul>
                                     </div>
                                 </div>
@@ -555,80 +550,7 @@
 
                     </div>
                 </div>
-
-                <div class="wrap-back-link">
-                    <div class="container">
-                        <div class="back-link-box">
-                            <h3 class="backlink-title">Quick Links</h3>
-                            <div class="back-link-row">
-                                <ul class="list-back-link">
-                                    <li><span class="row-title">Mobiles:</span></li>
-                                    <li><a href="#" class="redirect-back-link" title="mobile">Mobiles</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="yphones">YPhones</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Gianee Mobiles GL">Gianee Mobiles
-                                            GL</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Karbonn">Mobiles
-                                            Karbonn</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Viva">Mobiles Viva</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Intex">Mobiles Intex</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Micrumex">Mobiles
-                                            Micrumex</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Bsus">Mobiles Bsus</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Samsyng">Mobiles
-                                            Samsyng</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Lenova">Mobiles Lenova</a>
-                                    </li>
-                                </ul>
-
-                                <ul class="list-back-link">
-                                    <li><span class="row-title">Tablets:</span></li>
-                                    <li><a href="#" class="redirect-back-link" title="Plesc YPads">Plesc YPads</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Samsyng Tablets">Samsyng
-                                            Tablets</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Qindows Tablets">Qindows
-                                            Tablets</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Calling Tablets">Calling
-                                            Tablets</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Micrumex Tablets">Micrumex
-                                            Tablets</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Lenova Tablets Bsus">Lenova
-                                            Tablets Bsus</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Tablets iBall">Tablets iBall</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Tablets Swipe">Tablets Swipe</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Tablets TVs, Audio">Tablets TVs,
-                                            Audio</a></li>
-                                </ul>
-
-                                <ul class="list-back-link">
-                                    <li><span class="row-title">Fashion:</span></li>
-                                    <li><a href="#" class="redirect-back-link" title="Sarees Silk">Sarees Silk</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="sarees Salwar">sarees Salwar</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Suits Lehengas">Suits Lehengas</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Biba Jewellery">Biba Jewellery</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Rings Earrings">Rings Earrings</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Diamond Rings">Diamond Rings</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Loose Diamond Shoes">Loose Diamond
-                                            Shoes</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="BootsMen Watches">BootsMen
-                                            Watches</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Women Watches">Women Watches</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <br>
 
             </div>
 

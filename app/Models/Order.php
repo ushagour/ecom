@@ -4,55 +4,28 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
-use \DateTimeInterface;
+
 class Order extends Model
 {
-    
-    use SoftDeletes, HasFactory;
-    Protected  $table="orders";
-    
-  protected $dates = [
-      'created_at',
-      'updated_at',
-      'deleted_at'
-  ];
+  use HasFactory;
 
-  protected $fillable = [
-      'tax',
-      'total',
-      'firstName',
-      'lastName',
-      'mobile',
-      'email',
-      'line',
-      'line1',
-      'city',
-      'province',
-      'country',
-      'zipcode',
-      'status',
-      'is_shipping_difrent',
-      'created_at',
-      'updated_at',
-      'deleted_at'
-  ];
-  protected function serializeDate(DateTimeInterface $date)
+  public function user()
   {
-      return $date->format('Y-m-d H:i:s');
-  }
-  public function ordreItems()
-  {
-      return $this->HasMany(OrderItem::class);
-  }
-  public function Shipping()
-  {
-      return $this->HasOne(Shipping::class);
-  }
-  public function Transaction()
-  {
-      return $this->HasOne(Transaction::class);
+    return $this->belongsTo(User::class);
   }
 
+  public function orderItems()
+  {
+    return $this->hasMany(OrderItem::class);
+  }
 
+  public function shipping()
+  {
+    return $this->hasOne(Shipping::class);
+  }
+
+  public function transaction()
+  {
+    return $this->hasOne(Transaction::class);
+  }
 }

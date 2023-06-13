@@ -86,31 +86,27 @@
                             </ul>
                         </div>
                         <div class="topbar-menu right-menu">
-                                <center><h3><span>Nos références</span></h3></center>
                             <ul>
 
                                 <li class="menu-item lang-menu menu-item-has-children parent">
-                                    <a title="English" href="#"><span class="img label-before"><img
+                                
+
+                                            <a title="french" href="#"><span
+                                                class="img label-before"><img
+                                                    src="{{ asset('assets/images/lang-fra.png')}}"
+                                                    alt="lang-fre"></span>French</a>
+                                    <ul class="submenu lang">
+                                 
+                                        <li class="menu-item"><a title="Maroc" href="#"><span class="img label-before"><img
+                                            src="{{ asset('assets/images/lang-ma.png')}}"
+                                            alt="lang-en"></span>Maroc<i class="fa fa-angle-down"
+                                        aria-hidden="true"></i></a></li>
+                                        <li class="menu-item">
+                                            <a title="English" href="#"><span class="img label-before"><img
                                                 src="{{ asset('assets/images/lang-en.png')}}"
                                                 alt="lang-en"></span>English<i class="fa fa-angle-down"
                                             aria-hidden="true"></i></a>
-                                    <ul class="submenu lang">
-                                        <li class="menu-item"><a title="hungary" href="#"><span
-                                                    class="img label-before"><img
-                                                        src="{{ asset('assets/images/lang-hun.png')}}"
-                                                        alt="lang-hun"></span>Hungary</a></li>
-                                        <li class="menu-item"><a title="german" href="#"><span
-                                                    class="img label-before"><img
-                                                        src="{{ asset('assets/images/lang-ger.png')}}"
-                                                        alt="lang-ger"></span>German</a></li>
-                                        <li class="menu-item"><a title="french" href="#"><span
-                                                    class="img label-before"><img
-                                                        src="{{ asset('assets/images/lang-fra.png')}}"
-                                                        alt="lang-fre"></span>French</a></li>
-                                        <li class="menu-item"><a title="canada" href="#"><span
-                                                    class="img label-before"><img
-                                                        src="{{ asset('assets/images/lang-can.png')}}"
-                                                        alt="lang-can"></span>Canada</a></li>
+                                           </li>
                                     </ul>
                                 </li>
                                 <li class="menu-item menu-item-has-children parent">
@@ -272,11 +268,13 @@
                         <div class="container">
                             <ul class="nav menu-nav clone-main-menu" id="mercado_haead_menu" data-menuname="Sale Info">
                                 <li class="menu-item"><a href="#" class="link-term">Conformité</a><span
-                                        class="nav-label hot-label">hot</span></li>
+                                        class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
                                 <li class="menu-item"><a href="#" class="link-term">Qualité</a><span
-                                        class="nav-label hot-label">hot</span></li>
+                                        class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
                                 <li class="menu-item"><a href="#" class="link-term">Service apre vente </a><span
-                                        class="nav-label hot-label">hot</span></li>
+                                        class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
+                                <li class="menu-item"><a href="#" class="link-term">Un project ? Contacte nous !</a><span
+                                        class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
                               
                             </ul>
                         </div>
@@ -302,7 +300,10 @@
                                     <a href="/checkout" class="link-term mercado-item-title">Checkout</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="/contact-us" class="link-term mercado-item-title">Contactaa</a>
+                                    <a href="/contact-us" class="link-term mercado-item-title">Contact</a>
+                                </li>
+                                <li class="menu-item">
+                                    <a href="/cataloge" class="link-term mercado-item-title">Cataloge</a>
                                 </li>
                             </ul>
                         </div>
@@ -467,7 +468,7 @@
                                     <div class="wrap-list-item social-network">
                                         <ul>
                                             <li><a href="#" class="link-to-item" title="whatsapp"><i
-                                                        class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                        class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
                                             <li><a href="#" class="link-to-item" title="facebook"><i
                                                         class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                             <li><a href="#" class="link-to-item" title="pinterest"><i
@@ -507,79 +508,7 @@
                     </div>
                 </div>
 
-                <div class="wrap-back-link">
-                    <div class="container">
-                        <div class="back-link-box">
-                            <h3 class="backlink-title">Quick Links</h3>
-                            <div class="back-link-row">
-                                <ul class="list-back-link">
-                                    <li><span class="row-title">Mobiles:</span></li>
-                                    <li><a href="#" class="redirect-back-link" title="mobile">Mobiles</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="yphones">YPhones</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Gianee Mobiles GL">Gianee Mobiles
-                                            GL</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Karbonn">Mobiles
-                                            Karbonn</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Viva">Mobiles Viva</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Intex">Mobiles Intex</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Micrumex">Mobiles
-                                            Micrumex</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Bsus">Mobiles Bsus</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Samsyng">Mobiles
-                                            Samsyng</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Mobiles Lenova">Mobiles Lenova</a>
-                                    </li>
-                                </ul>
-
-                                <ul class="list-back-link">
-                                    <li><span class="row-title">Tablets:</span></li>
-                                    <li><a href="#" class="redirect-back-link" title="Plesc YPads">Plesc YPads</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Samsyng Tablets">Samsyng
-                                            Tablets</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Qindows Tablets">Qindows
-                                            Tablets</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Calling Tablets">Calling
-                                            Tablets</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Micrumex Tablets">Micrumex
-                                            Tablets</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Lenova Tablets Bsus">Lenova
-                                            Tablets Bsus</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Tablets iBall">Tablets iBall</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Tablets Swipe">Tablets Swipe</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Tablets TVs, Audio">Tablets TVs,
-                                            Audio</a></li>
-                                </ul>
-
-                                <ul class="list-back-link">
-                                    <li><span class="row-title">Fashion:</span></li>
-                                    <li><a href="#" class="redirect-back-link" title="Sarees Silk">Sarees Silk</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="sarees Salwar">sarees Salwar</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Suits Lehengas">Suits Lehengas</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Biba Jewellery">Biba Jewellery</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Rings Earrings">Rings Earrings</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Diamond Rings">Diamond Rings</a>
-                                    </li>
-                                    <li><a href="#" class="redirect-back-link" title="Loose Diamond Shoes">Loose Diamond
-                                            Shoes</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="BootsMen Watches">BootsMen
-                                            Watches</a></li>
-                                    <li><a href="#" class="redirect-back-link" title="Women Watches">Women Watches</a>
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+           
 
             </div>
 

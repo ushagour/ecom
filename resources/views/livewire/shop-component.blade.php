@@ -131,29 +131,27 @@
 
 				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar">
 					<div class="widget mercado-widget categories-widget">
-				
-				<h2 class="widget-title">All Categories</h2>
-				<div class="widget-content">
-					<ul class="list-category">
-						@foreach ($categories as $category)
-						<li class="category-item {{count ($category->subCategories) > 8 ? 'has-child-cate':''}}">
-							<a href="{{route('product.category', ['category_slug'=>$category->slug])}}"
-								class="cate-link">{{$category->name}}</a> @if(count($category->subCategories)>0)
-							<span class="toggle-control">+</span>
-							<ul class="sub-cate">
-								
-								@foreach($category->subCategories as $scategory)
-								<li class="category-item">
-									<a href="#" class="cat-link"><i class="fa fa-caret-right"></i> {{$scategory->name}}</a> 
-								</li>
-								@endforeach
-							</ul>
-							@endif
-						</li>
-						@endforeach
-					</ul>
-				</div>
-					</div><!-- Categories widget-->
+						<h2 class="widget-title">All Categories</h2>
+						<div class="widget-content">
+						  <ul class="list-category">
+							@foreach ($categories as $category)
+							  <li class="category-item {{ count($category->subCategories) > 0 ? 'has-child-cate':'' }}">
+								<a href="{{ route('product.category', ['category_slug' => $category->slug]) }}" class="cate-link">{{ $category->name }}</a>
+								@if (count($category->subCategories) > 0)
+								  <span class="toggle-control">+</span>
+								  <ul class="sub-cate">
+									@foreach ($category->subCategories as $scategory)
+									  <li class="category-item">
+										<a href="{{ route('product.category', ['category_slug' => $category->slug, 'scategory_slug' => $scategory->slug]) }}" class="cat-link"><i class="fa fa-caret-right"> {{ $scategory->name }}</i></a>
+									  </li>
+									@endforeach
+								  </ul>
+								@endif
+							  </li>
+							@endforeach
+						  </ul>
+						</div>
+					  </div><!-- Categories widget-->
 
 					<div class="widget mercado-widget filter-widget brand-widget">
 						<h2 class="widget-title">Brand</h2>
@@ -181,36 +179,8 @@
 						<div  id="slider" wire:ignore></div>
 						</div>
 					</div><!-- Price-->
-
-					<div class="widget mercado-widget filter-widget">
-						<h2 class="widget-title">Color</h2>
-						<div class="widget-content">
-							<ul class="list-style vertical-list has-count-index">
-								<li class="list-item"><a class="filter-link " href="#">Red <span>(217)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Yellow <span>(179)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Black <span>(79)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Blue <span>(283)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Grey <span>(116)</span></a></li>
-								<li class="list-item"><a class="filter-link " href="#">Pink <span>(29)</span></a></li>
-							</ul>
-						</div>
-					</div><!-- Color -->
-
-					<div class="widget mercado-widget filter-widget">
-						<h2 class="widget-title">Size</h2>
-						<div class="widget-content">
-							<ul class="list-style inline-round ">
-								<li class="list-item"><a class="filter-link active" href="#">s</a></li>
-								<li class="list-item"><a class="filter-link " href="#">M</a></li>
-								<li class="list-item"><a class="filter-link " href="#">l</a></li>
-								<li class="list-item"><a class="filter-link " href="#">xl</a></li>
-							</ul>
-							<div class="widget-banner">
-								<figure><img src="{{ asset('assets/images/size-banner-widget.jpg')}}" width="270" height="331" alt=""></figure>
-							</div>
-						</div>
-					</div><!-- Size -->
-
+<br>
+<br>
 					<div class="widget mercado-widget widget-product">
 						<h2 class="widget-title">Popular Products</h2>
 						<div class="widget-content">
