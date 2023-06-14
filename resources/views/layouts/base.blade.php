@@ -346,7 +346,7 @@
                                     <a href="/contact-us" class="link-term mercado-item-title">Contact Us</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="/cataloge" class="link-term mercado-item-title">Cataloge</a>
+                                    <a href="/cataloge" class="link-term mercado-item-title">Our catalogs</a>
                                 </li>
                             </ul>
                         </div>

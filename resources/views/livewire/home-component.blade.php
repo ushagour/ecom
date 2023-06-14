@@ -215,7 +215,7 @@
 				<h3 class="title-box">Latest Products</h3>
 				<div class="wrap-top-banner">
 					<a href="#" class="link-banner banner-effect-2">
-						<figure><img src="{{ asset('assets/images/digital-electronic-banner.jpg')}}" width="1170" height="240" alt=""></figure>
+						<figure><img src="{{ asset('assets/images/kenitra.png')}}" width="1170" height="240" alt=""></figure>
 					</a>
 				</div>
 				<div class="wrap-products">
@@ -380,7 +380,7 @@
 				<h3 class="title-box">Product Categories</h3>
 				<div class="wrap-top-banner">
 					<a href="#" class="link-banner banner-effect-2">
-						<figure><img src="{{ asset('assets/images/fashion-accesories-banner.jpg')}}" width="1170" height="240" alt=""></figure>
+						<figure><img src="{{ asset('assets/images/sl2.jpg')}}" width="1170" height="240" alt=""></figure>
 					</a>
 				</div>
 				<div class="wrap-products">
