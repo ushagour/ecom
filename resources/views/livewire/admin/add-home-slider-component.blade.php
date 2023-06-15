@@ -21,11 +21,9 @@
                 <div class="form-group">
                     <label class="col-md-3 control-label" for="short_description">subtitle</label>
                     <div class="col-md-6">
-                        <input class="form-control" data-plugin-maxlength maxlength="20" id="short_description"
+                        <input class="form-control" data-plugin-maxlength maxlength="200" id="short_description"
                             wire:model="subtitle" />
-                        <p>
-                            <code>max-length</code> set to 20.
-                        </p>
+                      
                     </div>
                 </div>
       
@@ -88,8 +86,10 @@
                     </div>
                 </div>
 
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </form>
+                <div class="form-group">
+                   <center><button type="submit" class="btn btn-danger">Submit</button></center>
+                   
+                  </div>            </form>
         </div>
     </section>
 </div>

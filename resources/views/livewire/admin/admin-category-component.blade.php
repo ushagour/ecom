@@ -1,154 +1,79 @@
-
-@push("more_style")
-    <style>
-        .error{
-            color: red;
-
-        }
-    </style>
-@endpush
-<section class="panel">
-    <header class="panel-heading">
-
-    </header>
-    <div class="panel-body">
-        <section class="panel">
-            <header class="panel-heading">
-
-               <center> <h2 class="panel-title">all Categories </h2></center> 
-            </header>
-            <div class="panel-body">
-                <form class="form-horizontal form-bordered form-bordered" method="POST"
-                    wire:submit.prevent="saveCategory">
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="textareaDefault">name</label>
-                        <div class="col-md-6">
-                            <input class="form-control" data-plugin-maxlength maxlength="20" wire:model="name"
-                                wire:keydown="GenerateSlug" />
-                            <p>
-                                <code>max-length</code> set to 20. @error('name') <span class="error">{{ $message }}</span> @enderror
-
-                            </p>
-
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-3 control-label" for="textareaDefault">slug</label>
-                        <div class="col-md-6">
-                            <input class="form-control" data-plugin-maxlength maxlength="20" wire:model="slug" />
-                            <p>
-                                <code>max-length</code> set to 20.
-                            </p>
-                            @error('slug') <span class="error">{{ $message }}</span> @enderror
-
-                        </div>
-                    </div>
-                    <div class="pull-right">
-
-                        <input type="submit" class="btn btn-primary" value="add">
-                        <input type="reset" class="p-2 btn btn-danger" value="reset">
-                    </div>
-
-                </form>
+<div>
+  <style>
+    nav svg {
+      height: 20px;
+    }
+    nav .hidden {
+      display:  block !important;
+    }
+    .sclist {
+      list-style: none;
+      margin-left: -35px;
+    }
+    .sclist li {
+      line-height: 30px;
+    }
+    .slink i {
+      font-size: 15px;
+    }
+  </style>
+  <div class="container" style="padding: 30px 0;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <div class="row">
+              <div class="col-md-6">
+                All Categories
+              </div>
+              <div class="col-md-6">
+                <a href="" style="background-color:#9f1a4e;" class="btn btn-danger pull-right">Add New</a>
+              </div>
             </div>
-        </section>
-
-        <table class="table table-bordered table-striped mb-none" id="datatable-editable">
-            <thead>
+          </div>
+          <div class="panel-body">
+            @if (Session::has('message'))
+              <div class="alert alert-success" role="alert">{{ Session::get('message') }}</div>
+            @endif
+            <table class="table table-striped">
+              <thead>
                 <tr>
-                    <th></th>
-                    <th>name</th>
-                    <th>slug</th>
-                    <th>Actions</th>
+                  <th>Id</th>
+                  <th>Category</th>
+                  <th>Slug</th>
+                  <th>Sub Category</th>
+                  <th>Action</th>
                 </tr>
-            </thead>
-            <tbody>
-                @if($categories->count()>0)
-
-                @foreach($categories as $category)
-                <tr class="gradeU">
-                    <td> {{$category->id}}</td>
-                    <td> {{$category->name}}</td>
-                    <td> {{$category->slug}}</td>
-
-                    <td class="actions">
-                        <a href="#" class="hidden on-editing save-row"><i class="fa fa-save"></i></a>
-                        <a href="#" class="hidden on-editing cancel-row"><i class="fa fa-times"></i></a>
-
-                        <a data-toggle="modal" data-target="#myModal{{$category->id}}"
-                            class="on-default edit-row"><i class="fa fa-pencil"></i></a>
-                        <a href="#" class="on-default remove-row"><i class="fa fa-trash-o"></i></a>
-                    </td>
-                </tr>
-
-
-                <!-- Modal -->
-                <div id="myModal{{$category->id}}" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                        <!-- Modal content-->
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                <h4 class="modal-title"> Category : {{$category->name}} </h4>
-                            </div>
-                            <div class="modal-body">
-                                
-                                <form class="form-horizontal form-bordered form-bordered" method="POST"
-                                wire:submit.prevent="saveCategory">
-                                <div class="row">
-                                    <div class="form-group">
-                                        <label class="col-md-3 control-label" >name </label>
-                                        
-                                        <input type="text" class="col-md-6 form-control" maxlength="20"
-                                        value="{{$category->name}}" />
-                                        @error('name') <span class="error">{{ $message }}</span> @enderror
-
-                                      </div>
-                                      <div class="form-group">
-                                        <label class="col-md-3 control-label" >slug</label>
-                                        <input type="text"class="col-md-6 form-control" maxlength="20"
-                                        value="{{$category->slug}}" />
-                                        @error('slug') <span class="error">{{ $message }}</span> @enderror
-
-                                      </div>
-
-                           
-                                    </div>
-                                    </form>
-
-                            </div>
-                            <div class="modal-footer">
-                                <input type="submit" class="btn btn-succesfly" value="edit">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                            </div>
-                        </div>
-                        </div>
-                        </div>
-
-
+              </thead>
+              <tbody>
+                @foreach ($categories as $category)
+                  <tr>
+                    <td>{{ $loop->iteration }}</td>
+                    <td>{{ $category->name }}</td>
+                    <td>{{ $category->slug }}</td>
+                    <td>
+                      <ul class="sclist">
+                        @foreach ($category->subCategories as $scategory)
+                          <li>
+                            <i class="fa fa-caret-right"></i> {{ $scategory->name }}
+                            <a href="{{ route('admin.editSubCategories', [$category->slug, $scategory->slug]) }}" class="slink"><i class="fa fa-edit"></i></a>
+                            <a href="" wire:click.prevent="deleteSubCategory({{ $scategory->id }})" onclick="confirm('Do you want to delete category id no. {{ $loop->iteration }}?') || event.stopImmediatePropagation" class="slink"><i class="fa fa-times text-center"></i></a>
+                          </li>
                         @endforeach
-
-                        @else
-
-                        <tr>
-                            <td class="text-center" colspan="5"> no category yet !</td>
-                        </tr>
-                        @endif
-
-
-            </tbody>
-        </table>
-        <div class="wrap-pagination-info">
-            {{$categories->links()}}
-
+                      </ul>
+                    </td>
+                    <td>
+                      <a href="{{ route('admin.editcategories', $category->slug) }}">Edit</a> | 
+                      <a href="" onclick="confirm('Do you want to delete sub category id no. {{ $loop->iteration }}?') || event.stopImmediatePropagation()" wire:click.prevent="deleteCategory({{ $category->id }})">Delete</a>
+                    </td>
+                  </tr>
+                @endforeach
+              </tbody>
+            </table>
+            {{ $categories->links() }}
+          </div>
         </div>
-
+      </div>
     </div>
-
-    <!-- Button trigger modal -->
-
-
-
-
-</section>
+  </div>
+</div>

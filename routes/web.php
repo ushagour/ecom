@@ -35,6 +35,10 @@ use App\Http\Livewire\User\UserOrdersDetailsComponent;
 use App\Http\Livewire\User\UserProfileComponent;
 use App\Http\Livewire\User\UserReviewComponent;
 use App\Http\Controllers\PDFController;
+use App\Http\Livewire\Admin\AdminAddAttributeComponent;
+use App\Http\Livewire\Admin\AdminAttributesComponent;
+use App\Http\Livewire\Admin\AdminEditAttributeComponent;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -112,9 +116,9 @@ Route::middleware([
   
     // Route::get('admin/settings', AdminSettingComponent::class)->name('admin.settings');
   
-    // Route::get('admin/attributes', AdminAttributesComponent::class)->name('admin.attributes');
-    // Route::get('admin/attribute/add', AdminAddAttributeComponent::class)->name('admin.add_attribute');
-    // Route::get('admin/attribute/edit/{attribute_id}', AdminEditAttributeComponent::class)->name('admin.edit_attribute');
+    Route::get('admin/attributes', AdminAttributesComponent::class)->name('admin.attributes');
+    Route::get('admin/attribute/add', AdminAddAttributeComponent::class)->name('admin.add_attribute');
+    Route::get('admin/attribute/edit/{attribute_id}', AdminEditAttributeComponent::class)->name('admin.edit_attribute');
   });
   Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/user/dashboard', UserDashboardComponent::class)->name('user.dashboard');

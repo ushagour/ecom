@@ -13,18 +13,16 @@ class AdminHomeSliderComponent extends Component
     use WithPagination;
  
 
-    public function DeleteHomeSlider($id)
-    {   
-        $HomeSlider = HomeSlider::find($id);
-        $HomeSlider->delete();
-        session()->flash('success_info','HomeSlider deleted');
-
-    }
     public function render()
-    {
+  {
+    $HomeSliders  = HomeSlider::all();
+    return view('livewire.admin.admin-home-slider-component', compact('HomeSliders'))->layout('layouts.base');
+  }
 
-        $HomeSliders = HomeSlider::paginate(8);
+  public function deleteSlide($slide_id)
+  {
+    HomeSlider::find($slide_id)->delete();
 
-        return view('livewire.admin.admin-home-slider-component',["homesliders"=> $HomeSliders])->layout("layouts.base");
-    }
+    session()->flash('message', 'The data has been deleted.');
+  }
 }

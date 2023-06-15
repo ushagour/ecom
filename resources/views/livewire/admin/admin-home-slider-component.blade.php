@@ -1,53 +1,56 @@
-<section class="panel">
-    <header class="panel-heading">
-
-
-        <a href="{{route("add.sliders")}}" class="btn btn-primary pull-right " style="margin-bottom: 12px;"> Add new homeslider </a>
-
-    </header>
-    <div class="panel-body">
-	
-
-
-
-       <table class="table table-bordered table-striped mb-none" id="datatable-tabletools" data-swf-path="{{ asset('assets/jquery-datatables/extras/TableTools/swf/copy_csv_xls_pdf.swf')}}">
+<div>
+  <div class="container" style="padding: 30px 0;">
+    <div class="row">
+      <div class="col-md-12 panel panel-default">
+        <div class="panel-heading">
+          <div class="row">
+            <div class="col-md-6">
+              All Slides
+            </div>
+            <div class="col-md-6">
+              <a href="{{ route('add.sliders') }}" class="btn btn-danger pull-right">Add New Slide</a>
+            </div>
+          </div>
+        </div>
+        <div class="panel-body">
+          @if (Session::has('message'))
+            <div class="alert alert-success" role="alert">{{ Session::get('message') }}</div>
+          @endif
+          <table class="table table-striped">
             <thead>
-                <tr>
-                   <th>title</th>
-                   <th>subtitle</th>
-                   <th>price</th>
-                   <th>link</th>
-                   <th>image</th>
-                   <th>status</th>
-                   <th>created At </th>
-                   <th>Actions</th>
-                </tr>
+              <tr>
+                <th>Id</th>
+                <th>Image</th>
+                <th>Title</th>
+                <th>Subtitle</th>
+                <th>Price</th>
+                <th>Link</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Action</th>
+              </tr>
             </thead>
             <tbody>
-                  @if($homesliders->count()>0)
-                        @foreach($homesliders as $homeslider)
-                        <tr class="gradeX">
-                            <td>{{$homeslider->title}}</td>
-                            <td>{{$homeslider->subtitle}}</td>
-                            <td>{{$homeslider->price}}</td>
-                            <td>{{$homeslider->link}}</td>
-                            <td><img src="{{ asset('assets/images/slider').'/'.$homeslider->image}}" width="60" alt="{{$homeslider->name}}"></td>
-                            <td>{{($homeslider->status)?"active":"inactive" }}</td>
-                            <td>{{$homeslider->created_at}}</td>
-                            <td class="actions">
-                                <a href="{{route('edit.sliders',["id"=>$homeslider->id])}}" class="on-default edit-row lg"><i class="fa fa-pencil fa-2x text-primary"></i></a>
-                                <a  wire:click.prevent="Deletehomeslider({{$homeslider->id}})" class="on-default remove-row"><i class="fa fa-trash-o fa-2x text-danger"></i></a>
-                            </td>                    
-                            </tr>
-                        @endforeach
-                        @endif
-
-      
+              @foreach ($HomeSliders as $slider)
+                <tr>
+                  <td>{{ $slider->id }}</td>
+                  <td><img src="{{ asset('assets/images/sliders') }}/{{ $slider->image }}" alt="{{ $slider->image }}" width="150"></td>
+                  <td>{{ $slider->title }}</td>
+                  <td>{{ $slider->subtitle }}</td>
+                  <td>{{ $slider->price }}</td>
+                  <td>{{ $slider->link }}</td>
+                  <td>{{ $slider->status == 1 ? 'Active' : 'Inactive' }}</td>
+                  <td>{{ $slider->created_at }}</td>
+                  <td>
+                    <a href="{{ route('edit.sliders', $slider->id) }}">Edit</a>
+                    <a href="" wire:click.prevent="deleteSlide({{ $slider->id }})">Delete</a>
+                  </td>
+                </tr>
+                @endforeach
             </tbody>
-        </table>
-        <div class="wrap-pagination-info">
-            {{$homesliders->links()}}
-
+          </table>
         </div>
+      </div>
     </div>
-</section>
+  </div>
+</div>
