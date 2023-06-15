@@ -24,6 +24,14 @@ class UserSeeder extends Seeder
                 'email'          => 'admin@admin.com',
                 'password'       => '$2y$10$KjopsXqbCq1NrrGYJe7rr./68LzZSGCas5XxBHHbG.9AF4mc3GPR.'//(password)           
              ],
+            [
+                'id'             => 2,
+                'name'           => 'user',
+                'utype'           => 'USR',
+                'profile_photo_path'=> '2.png',
+                'email'          => 'user@user.com',
+                'password'       => '$2y$10$KjopsXqbCq1NrrGYJe7rr./68LzZSGCas5XxBHHbG.9AF4mc3GPR.'//(password)           
+             ]
         ];
 
         User::insert($users);
