@@ -98,10 +98,10 @@ Route::middleware([
     Route::get('/admin/sliders/edit/{id}',EditHomeSliderComponent::class)->name('edit.sliders');
 
     Route::get('/admin/categories',AdminCategoryComponent::class)->name('admin.categories');
-    Route::get('/admin/categories/edit/{category_slug}',AdminCategoryComponent::class)->name('admin.admin.editcategories');
+    Route::get('/admin/categories/edit/{category_slug}',AdminCategoryComponent::class)->name('admin.editcategories');
   
     Route::get('/admin/subCategories',AdminSubCategoryComponent::class)->name('admin.subCategories');
-    Route::get('/admin/subCategories/edit/{sub_category_slug}',AdminSubCategoryComponent::class)->name('admin.admin.editSubCategories');
+    Route::get('/admin/subCategories/edit/{sub_category_slug}',AdminSubCategoryComponent::class)->name('admin.editSubCategories');
   
     Route::get('/admin/home-categories',AdminHomeCategoriesComponent::class)->name('admin.home.categories');
     Route::get('/admin/OnSale',AdminOnsaleComponent::class)->name('admin.OnSale');
