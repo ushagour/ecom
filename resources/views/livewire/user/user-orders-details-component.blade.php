@@ -20,7 +20,10 @@
           <div class="panel-body">
             <table class="table">
               <th>Ordered Id</th>
-              <td>{{ $order->id }}</td>
+
+
+
+
               <th>Ordere Date</th>
               <td>{{ $order->created_at }}</td>
               <th>Status</th>

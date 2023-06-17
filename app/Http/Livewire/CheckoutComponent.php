@@ -7,9 +7,11 @@ use App\Models\OrderItem;
 use App\Models\Shipping;
 use App\Models\Transaction;
 use Cart;
+use PDF;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
+use Illuminate\Http\UploadedFile;
 
 class CheckoutComponent extends Component
 {
@@ -64,9 +66,9 @@ class CheckoutComponent extends Component
 
   
     $order = new Order();
-    // $order->user_id = Auth::user()->id;
-    $order->tax =54 ;//session()->get('checkout')['tax'];
-    $order->total = 46;//session()->get('checkout')['total'];
+    $order->user_id = Auth::user()->id;
+    $order->tax =session()->get('checkout')['tax'];
+    $order->total =session()->get('checkout')['total'];
     $order->firstname = $this->firstname;
     $order->lastname = $this->lastname;
     $order->email = $this->email;
@@ -146,14 +148,28 @@ class CheckoutComponent extends Component
     $transaction->save();
   }
 
+  public function generateDevis()
+  {
+    // $pdfUrl = Storage::url('devis.pdf');
+
+    // $this->dispatchBrowserEvent('openPDF', ['pdfUrl' => $pdfUrl]);
+
+
+
+
+
+  }
   public function verifyForCheckout()
   {
 
-    // return redirect()->route('generateDevi');
-// before check out 
-   if ($this->thankyou) {
+    // $this->generateDevis();
+    if (!Auth::check()) {
+      return redirect()->route('login');
+    } else if ($this->thankyou) {
       return redirect()->route('thankyou');
-    } 
+    } else if (!session()->get('checkout')) {
+      return redirect()->route('product.cart');
+    }
   }
 
 

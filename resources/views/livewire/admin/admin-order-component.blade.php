@@ -21,7 +21,6 @@
                 <tr>
                   <th>Order Id</th>
                   <th>Subtotal</th>
-                  <th>Discount</th>
                   <th>Tax</th>
                   <th>Total</th>
                   <th>First Name</th>
@@ -38,8 +37,7 @@
                 @foreach ($orders as $order)
                 <tr>
                   <td>{{ $order->id }}</td>
-                  <td>${{ $order->subtotal }}</td>
-                  <td>${{ $order->discount }}</td>
+                  <td>$160</td>
                   <td>${{ $order->tax }}</td>
                   <td>${{ $order->total }}</td>
                   <td>{{ $order->firstname }}</td>

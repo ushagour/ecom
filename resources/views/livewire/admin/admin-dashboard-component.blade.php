@@ -129,7 +129,6 @@
                 <tr>
                   <th>Order Id</th>
                   <th>Subtotal</th>
-                  <th>Discount</th>
                   <th>Tax</th>
                   <th>Total</th>
                   <th>First Name</th>
@@ -147,7 +146,6 @@
                 <tr>
                   <td>{{ $order->id }}</td>
                   <td>${{ $order->subtotal }}</td>
-                  <td>${{ $order->discount }}</td>
                   <td>${{ $order->tax }}</td>
                   <td>${{ $order->total }}</td>
                   <td>{{ $order->firstname }}</td>
@@ -157,7 +155,10 @@
                   <td>{{ $order->zipcode }}</td>
                   <td>{{ $order->status }}</td>
                   <td>{{ $order->created_at }}</td>
-                  <td><a href="{{ route('admin.orderdetails', $order->id) }}" class="btn btn-danger btn-sm">Details</a></td>
+                  <td>
+                    <a href="{{ asset('/assets/devis.pdf')}}" target="_blank" class="btn btn-primary btn-sm">Devis</a>
+
+                    <a href="{{ route('admin.orderdetails', $order->id) }}" class="btn btn-danger btn-sm">Details</a></td>
                 </tr>
                 @endforeach
               </tbody>

@@ -18,8 +18,8 @@
 						<div class="detail-media">
 							<div class="product-gallery">
 							  <ul class="slides">
-							    <li data-thumb="{{asset('assets/images/products')}}/{{$product->image}}">
-							    	<img src="{{asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}" />
+							    <li  data-thumb="{{asset('assets/images/products')}}/{{$product->image}}">
+							    	<img style="height: 388px;" src="{{asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}" />
 							    </li>
 							  </ul>
 							</div>
@@ -69,7 +69,7 @@
 
 								@endif
                                 <div class="wrap-btn">
-                                    <a href="#" class="btn btn-compare">Add Compare</a>
+                                    {{-- <a href="#" class="btn btn-compare">Add Compare</a> --}}
                                     <a href="#" class="btn btn-wishlist">Add Wishlist</a>
                                 </div>
 							</div>
@@ -183,7 +183,7 @@
 				</div><!--end main products area-->
 
 				<div class="col-lg-3 col-md-4 col-sm-4 col-xs-12 sitebar">
-					<div class="widget widget-our-services ">
+					{{-- <div class="widget widget-our-services ">
 						<div class="widget-content">
 							<ul class="our-services">
 
@@ -221,7 +221,7 @@
 								</li>
 							</ul>
 						</div>
-					</div><!-- Categories widget-->
+					</div><!-- Categories widget--> --}}
 
 					<div class="widget mercado-widget widget-product">
 						<h2 class="widget-title">Popular Products</h2>
@@ -233,7 +233,7 @@
 									<div class="product product-widget-style">
 										<div class="thumbnnail">
 											<a href="{{route('product.details',['slug'=>$p_product->slug])}}" title="{{$p_product->name}}">
-												<figure><img src="{{ asset('assets/images/products')}}/{{$p_product->image}}" alt=""></figure>
+												<figure><img   src="{{ asset('assets/images/products')}}/{{$p_product->image}}" alt=""></figure>
 											</a>
 										</div>
 										<div class="product-info">

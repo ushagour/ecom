@@ -9,7 +9,7 @@
               @if ($user->profile->image)
                 <img src="{{ asset('assets/images/profile') }}/{{ $user->profile->image }}" alt="{{ $user->profile->image }}" width="350px">
               @else
-                <img src="{{ asset('assets/images/profile/ProfileDummy.jpg') }}" alt="ProfileDummy.jpg" width="350px">
+                <img src="{{ asset('assets/images/ProfileDummy.jpg') }}" alt="ProfileDummy.jpg" width="350px">
               @endif
             </div>
             <div class="col-md-8">

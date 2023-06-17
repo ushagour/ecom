@@ -14,7 +14,7 @@
 		<div class="container">
 			<!-- <div class="main-content-area"> -->
 				<div class="aboutus-info style-center">
-					<b class="box-title">Mot du Président</b>
+					<h1 style="font-family: cursive;"><b class="box-title">Mot du Président</b></h1>
 					<p class="txt-content">
                         AKLIM symbole de grandeur; de richesse, de splendeur et de résilience, est l’un des plus hauts sommets de l’anti-atlas marocain, il représente une inspiration forte à notre activité;
 
@@ -124,7 +124,7 @@
 				</div>
 
 				<div class="our-team-info">
-					<h4 class="title-box">Our teams</h4>
+					<h4 class="title-box">Nos défis réalisés</h4>
 					<div class="our-staff">
 						<div 
 							class="slide-carousel owl-carousel style-nav-1 equal-container" 
@@ -137,79 +137,73 @@
 
 							<div class="team-member equal-elem">
 								<div class="media">
-									<a href="#" title="LEONA">
-										<figure><img src="assets/images/member-leona.jpg" alt="LEONA"></figure>
+									<a href="#" title="RABAT">
+										<figure><img src="assets/images/relise/1.jpg" alt="LEONA"></figure>
 									</a>
 								</div>
 								<div class="info">
-									<b class="name">leona</b>
-									<span class="title">Director</span>
-									<p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
+									<span class="title"><B>Rabat</B></span>
+									<p class="desc">Reaménagement de la PLACE MOULAY HASSAN </p>
+								</div>
+							</div>
+
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="Casablanca">
+										<figure><img src="assets/images/relise/2.jpg" alt="LUCIA"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title"><b>Casablanca</b></span>
+									<p class="desc">Aménagement de la place du grand théâtre de Casablanca </p>
+								</div>
+							</div>
+
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="Sale">
+										<figure><img src="assets/images/relise/3.jpg" alt="Sale"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title"><b>Sale</b></span>
+									<p class="desc">Extention tramway de Rabat (Hay Salam) </p>
+								</div>
+							</div>
+
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="Nador">
+										<figure><img src="assets/images/relise/4.jpg" alt="Nador"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title"><b>Nador</b></span>
+									<p class="desc">Aéroport Nador El Aroui .</p>
 								</div>
 							</div>
 
 							<div class="team-member equal-elem">
 								<div class="media">
 									<a href="#" title="LUCIA">
-										<figure><img src="assets/images/member-lucia.jpg" alt="LUCIA"></figure>
+										<figure><img src="assets/images/relise/5.jpg" alt="LUCIA"></figure>
 									</a>
 								</div>
 								<div class="info">
-									<b class="name">LUCIA</b>
-									<span class="title">Manager</span>
-									<p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
+									<span class="title">Ben Guerir</span>
+									<p class="desc">Av. Mohamed V, Ben Guerir ..</p>
 								</div>
 							</div>
 
 							<div class="team-member equal-elem">
 								<div class="media">
 									<a href="#" title="NANA">
-										<figure><img src="assets/images/member-nana.jpg" alt="NANA"></figure>
+										<figure><img src="assets/images/relise/6.jpg" alt="NANA"></figure>
 									</a>
 								</div>
 								<div class="info">
-									<b class="name">NANA</b>
-									<span class="title">Marketer</span>
-									<p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
-								</div>
-							</div>
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="BRAUM">
-										<figure><img src="assets/images/member-braum.jpg" alt="BRAUM"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<b class="name">BRAUM</b>
-									<span class="title">Member</span>
-									<p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
-								</div>
-							</div>
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="LUCIA">
-										<figure><img src="assets/images/member-lucia.jpg" alt="LUCIA"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<b class="name">LUCIA</b>
-									<span class="title">Manager</span>
-									<p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
-								</div>
-							</div>
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="NANA">
-										<figure><img src="assets/images/member-nana.jpg" alt="NANA"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<b class="name">NANA</b>
-									<span class="title">Marketer</span>
-									<p class="desc">Contrary to popular belief, Lorem Ipsum is not simply random text...</p>
+									<span class="title">Bernoussi</span>
+									<p class="desc">Place public Sidi Bernoussi .</p>
 								</div>
 							</div>
 

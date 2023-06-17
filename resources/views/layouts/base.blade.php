@@ -162,11 +162,11 @@
 
                                 <li class="menu-item lang-menu menu-item-has-children parent">
                                 
-
-                                    <a title="french" href="#"><span
-                                        class="img label-before"><img
-                                            src="{{ asset('assets/images/lang-fra.png')}}"
-                                            alt="lang-fre"></span>French</a>
+                                    <a title="English" href="#"><span class="img label-before"><img
+                                        src="{{ asset('assets/images/lang-en.png')}}"
+                                        alt="lang-en"></span>English<i class="fa fa-angle-down"
+                                    aria-hidden="true"></i></a>
+                               
                             <ul class="submenu lang">
                          
                                 <li class="menu-item"><a title="Maroc" href="#"><span class="img label-before"><img
@@ -174,10 +174,10 @@
                                     alt="lang-ar"></span>Maroc<i class="fa fa-angle-down"
                                 aria-hidden="true"></i></a></li>
                                 <li class="menu-item">
-                                    <a title="English" href="#"><span class="img label-before"><img
-                                        src="{{ asset('assets/images/lang-en.png')}}"
-                                        alt="lang-en"></span>English<i class="fa fa-angle-down"
-                                    aria-hidden="true"></i></a>
+                                    <a title="french" href="#"><span
+                                        class="img label-before"><img
+                                            src="{{ asset('assets/images/lang-fra.png')}}"
+                                            alt="lang-fre"></span>French</a>
                                    </li>
                             </ul>
                         </li>
@@ -313,6 +313,7 @@
                                         class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
                                 <li class="menu-item"><a href="#" class="link-term">Un project ? Contacte nous !</a><span
                                         class="nav-label hot-label"><i class="fa fa-solid fa-check"></i></span></li>
+                      
                               
                             </ul>
                         </div>

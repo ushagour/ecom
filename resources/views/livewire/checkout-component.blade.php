@@ -264,7 +264,7 @@
 						@endif
 						<div class="choose-payment-methods">
 							<label class="payment-method">
-								<input name="payment-method" id="payment-method-bank" value="cod" type="radio" wire:model="paymentmode">
+								<input name="payment-method" id="payment-method-bank" checked value="cod" type="radio" wire:model="paymentmode">
 								<span>Cash on Delivery</span>
 								<span class="payment-desc">Order Now! Pay on Delivery.</span>
 							</label>
@@ -285,6 +285,7 @@
 							</div>
 						@endif
 						<button type="submit" class="btn btn-danger">Place order now</button>
+
 					</div>
 					<div class="summary-item shipping-method">
 						<h4 class="title-box f-title">Shipping method</h4>
@@ -292,7 +293,11 @@
 						<p class="summary-info"><span class="title">Fixed $0</span></p>
 					</div>
 				</div>
+				{{-- <button wire:click="generateDevis">Generate Invoice</button> --}}
+
+				{{-- <a class="btn btn-clear" href="#" wire:click.prevent="generateDevis">Generate Devi</a> --}}
 			</form>
+
 		</div><!--end main content area-->
 	</div><!--end container-->
 </main>

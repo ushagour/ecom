@@ -24,16 +24,20 @@ class CartComponent extends Component
     }
     public function checkout()
     {
-            if(Auth::check())
-            {
-                return redirect()->route('checkout');
-            }
-            else
-            {
-                 return redirect()->route('login');
-            }
+        if (Auth::check()) {
+            return redirect()->route('checkout');
+          } else {
+            return redirect()->route('login');
+          }
+            
+           
     }
 
+    public function deleteFromSaveForLater($rowId)
+    {
+      Cart::instance('saveForLater')->remove($rowId);
+      session()->flash('s_success_message', 'The item(s) has been removed from save for later');
+    }
 
     public function decreaseQuantity($id)
 
@@ -62,8 +66,27 @@ class CartComponent extends Component
         $this->emitTo('cart-count-component','refreshComponent');
 
     }
+    public function setAmountForCheckout()
+  {
+    // if (!Cart::instance("cart")->count() > 0) {
+    //   session()->forget('checkout');
+    //   return;
+    // }
+      session()->put('checkout', [
+        'discount' => 0,
+        'subtotal' =>  Cart::instance("cart")->total(),
+        'tax' => Cart::instance("cart")->tax(),
+        'total' => Cart::instance("cart")->total()
+      ]);
+    
+  }
     public function render()
     {
+        $this->setAmountForCheckout();
+        if (Auth::check()) {
+            Cart::instance('cart')->store(Auth::user()->email);
+          }
+      
         return view('livewire.cart-component')->layout('layouts.base');
     }
 }

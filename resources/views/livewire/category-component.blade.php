@@ -166,7 +166,7 @@
 								<li class="list-item"><a class="filter-link " href="#">xl</a></li>
 							</ul>
 							<div class="widget-banner">
-								<figure><img src="{{ asset('assets/images/size-banner-widget.jpg')}}" width="270" height="331" alt=""></figure>
+								<figure><img src="{{ asset('assets/images/voir_plus1.jpg')}}" width="270" height="331" alt=""></figure>
 							</div>
 						</div>
 					</div><!-- Size -->
@@ -179,7 +179,7 @@
 									<div class="product product-widget-style">
 										<div class="thumbnnail">
 											<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-												<figure><img src="{{ asset('assets/images/products/digital_1.jpg')}}" alt=""></figure>
+												<figure><img  style="height: 220px; width: 200px;" src="{{ asset('assets/images/products/digital_1.jpg')}}" alt=""></figure>
 											</a>
 										</div>
 										<div class="product-info">

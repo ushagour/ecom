@@ -17,8 +17,8 @@ class CreateOrdersTable extends Migration
             $table->id();
             $table->decimal("tax");
             $table->decimal("total");
-            $table->string("firstName");
-            $table->string("lastName");
+            $table->string("firstname");
+            $table->string("lastname");
             $table->string("mobile");
             $table->string("email");
             $table->string("line");
@@ -31,6 +31,8 @@ class CreateOrdersTable extends Migration
             $table->boolean("is_shipping_difrent")->default(false);
             $table->date('delivered_date')->nullable();
             $table->date('canceled_date')->nullable();
+            $table->bigInteger('user_id')->unsigned();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->softDeletes();
             $table->timestamps();
             
