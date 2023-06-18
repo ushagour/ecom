@@ -11,20 +11,51 @@ use Cart;
 class DetailsComponent extends Component
 {
     public $slug;
+    public $qty;
     public function mount($slug)
     {
         $this->slug = $slug;
+        $this->qty = 1;
     }
   
-    public function store($product_id,$product_name,$regular_price){
+    public function addToCart($product_id,$product_name,$regular_price){
 
        
-        Cart::add($product_id,$product_name,1,$regular_price)->associate('App\Models\Product');//frre9 biin Prodcut::class w app/model /
+        Cart::instance("cart")->add($product_id,$product_name,1,$regular_price)->associate('App\Models\Product');//frre9 biin Prodcut::class w app/model /
        Session()->flash('success_info','item added to cart');
+
        return redirect()->route('product.cart');//returniih  l page dyal cart 
        
 
    }
+    public function store($product_id,$product_name,$regular_price){
+
+       
+        Cart::add($product_id,$product_name,$this->qty,$regular_price)->associate('App\Models\Product');//frre9 biin Prodcut::class w app/model /
+  
+                    Session()->flash('success_info','item added to cart');
+                    return redirect()->route('product.cart');
+       
+
+                 }
+
+
+                public function increaseQuantity()
+                {
+
+                    $this->qty++;
+
+                }
+                public function decreseQuantity()
+                {
+                
+                    if($this->qty > 1)
+                    {
+                        $this->qty--;
+                    }
+                
+                }
+                  
 
     public function render()
     {

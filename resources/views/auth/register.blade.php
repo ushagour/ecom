@@ -12,7 +12,11 @@
 				</ul>
 			</div>
 			<div class="row">
-				<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 col-md-offset-3">							
+				<center><h3>		Vous êtes sur le point de créer votre Compte sur notre site web,
+					veuillez renseigner les informations ci-dessous :	</br></h3></center>
+						
+				<div class="col-lg-6 col-sm-6 col-md-6 col-xs-12 col-md-offset-3">		
+			
 					<div class=" main-content-area">
 						<div class="wrap-login-item ">
 							<div class="register-form form-item ">

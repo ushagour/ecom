@@ -19,10 +19,10 @@
                             <div class="login-form form-item form-stl">
 
 
-                                <x-jet-validation-errors class="mb-4" />
 
                                 @if (session('status'))
-                                <div class="mb-4 font-medium text-sm text-green-600">
+   
+                                <div   class="mb-4 font-medium text-sm error text-green-600">
                                     {{ session('status') }}
                                 </div>
                                 @endif
@@ -59,6 +59,8 @@
                                     <x-jet-button class="ml-4 btn btn-submit">
                     {{ __('Log in') }}
                 </x-jet-button>
+                <x-jet-validation-errors class="mb-4"  style="color:red; text-align: center;"/>
+
                                             </form>
                             </div>
                         </div>

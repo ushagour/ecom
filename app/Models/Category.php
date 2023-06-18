@@ -9,4 +9,9 @@ class Category extends Model
 {
     use HasFactory;
     // protected $table ="categories";
+    protected $gurded=[];
+    public function SubCategories()
+    {
+        return $this->HasMany(SubCategory::class);
+    }
 }

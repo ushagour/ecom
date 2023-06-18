@@ -1,5 +1,11 @@
 <div>
     <section class="panel">
+        <div style="margin-left: 10%;" class="wrap-breadcrumb">
+            <ul>
+                <li class="item-link"><a href="{{route('admin.products')}}" class="link">Products</a></li>
+                <li class="item-link"><span>Edit</span></li>
+            </ul>
+        </div>
 
         @if (Session::has('success_info'))
 
@@ -143,8 +149,7 @@
                         </div>
                     </div>
                 </div>
-
-                <button type="submit" class="btn btn-primary">Submit</button>
+<center><button type="submit" class="btn btn-danger">Submit</button></center>
             </form>
         </div>
     </section>

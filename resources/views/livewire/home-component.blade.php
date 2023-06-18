@@ -8,34 +8,13 @@
 					<div class="item-slide">
 						<img src="{{ asset('assets/images/slider').'/'.$homeslider->image}}" alt="{{$homeslider->title}}" class="img-slide">
 						<div class="slide-info slide-1">
-							<h2 class="f-title">{{$homeslider->title}} <b>Watches</b></h2>
+							<h2 class="f-title">{{$homeslider->title}} <b>150+ Clients satisfaits</b></h2>
 							<span class="subtitle">{{$homeslider->subtitle}}.</span>
-							<p class="sale-info">Only price: <span class="price">{{$homeslider->price}}</span></p>
-							<a href="{{$homeslider->link}}" class="btn-link"> Shop Now</a>
 						</div>
 					</div>
 					@endforeach
 					
-				
-					{{-- <div class="item-slide">
-						<img src="{{ asset('assets/images/main-slider-1-2.jpg')}}" alt="" class="img-slide">
-						<div class="slide-info slide-2">
-							<h2 class="f-title">Extra 25% Off</h2>
-							<span class="f-subtitle">On online payments</span>
-							<p class="discount-code">Use Code: #FA6868</p>
-							<h4 class="s-title">Get Free</h4>
-							<p class="s-subtitle">TRansparent Bra Straps</p>
-						</div>
-					</div>
-					<div class="item-slide">
-						<img src="{{ asset('assets/images/main-slider-1-3.jpg')}}" alt="" class="img-slide">
-						<div class="slide-info slide-3">
-							<h2 class="f-title">Great Range of <b>Exclusive Furniture Packages</b></h2>
-							<span class="f-subtitle">Exclusive Furniture Packages to Suit every need.</span>
-							<p class="sale-info">Stating at: <b class="price">$225.00</b></p>
-							<a href="#" class="btn-link">Shop Now</a>
-						</div>
-					</div> --}}
+
 				</div>
 			</div>
 
@@ -215,7 +194,7 @@
 				<h3 class="title-box">Latest Products</h3>
 				<div class="wrap-top-banner">
 					<a href="#" class="link-banner banner-effect-2">
-						<figure><img src="{{ asset('assets/images/digital-electronic-banner.jpg')}}" width="1170" height="240" alt=""></figure>
+						<figure><img src="{{ asset('assets/images/kenitra.png')}}" width="1170" height="240" alt=""></figure>
 					</a>
 				</div>
 				<div class="wrap-products">
@@ -380,7 +359,7 @@
 				<h3 class="title-box">Product Categories</h3>
 				<div class="wrap-top-banner">
 					<a href="#" class="link-banner banner-effect-2">
-						<figure><img src="{{ asset('assets/images/fashion-accesories-banner.jpg')}}" width="1170" height="240" alt=""></figure>
+						<figure><img src="{{ asset('assets/images/sl2.jpg')}}" width="1170" height="240" alt=""></figure>
 					</a>
 				</div>
 				<div class="wrap-products">

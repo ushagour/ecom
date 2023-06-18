@@ -21,9 +21,54 @@ when you have a timer as a widget  and you have to give him a date you have to r
 
 ```
 
-| regular price    |      sale price       | 
-|----------        |:-------------:|
-|   product price  | sale price after sold out |
+```
+mermaid
+
+
+actor Customer as C
+actor Admin as A
+rectangle System {
+    usecase "Browse products" as UC1
+    usecase "Search products" as UC2
+    usecase "Add product to cart" as UC3
+    usecase "Remove product from cart" as UC4
+    usecase "View cart" as UC5
+    usecase "Proceed to checkout" as UC6
+    usecase "Make payment" as UC7
+    usecase "Track order" as UC8
+    usecase "Leave feedback" as UC9
+}
+
+rectangle "Admin Panel" {
+    usecase "Manage products" as UC15
+    usecase "Manage orders" as UC16
+    usecase "Manage inventory" as UC17
+    usecase "Manage customers" as UC18
+    usecase "Generate reports" as UC19
+}
+
+C --> UC1
+C --> UC2
+C --> UC3
+C --> UC4
+C --> UC5
+C --> UC6
+C --> UC7
+C --> UC8
+C --> UC9
+
+UC3 --> UC5
+UC6 --> UC7
+UC8 --> UC7
+
+A --> UC15
+A --> UC16
+A --> UC17
+A --> UC18
+A --> UC19
+
+
+
 
 
   

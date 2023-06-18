@@ -15,8 +15,9 @@ class CreateHomeCategoriesTable extends Migration
     {
         Schema::create('home_categories', function (Blueprint $table) {
             $table->id();
-            $table->string("sel_categories");
-            $table->integer("no_of_products");
+            $table->string("sel_categories")->nullable();
+            $table->integer("no_of_products")->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }
