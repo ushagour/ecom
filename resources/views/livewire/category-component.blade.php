@@ -15,7 +15,7 @@
 
 					<div class="banner-shop">
 						<a href="#" class="banner-link">
-							<figure><img src="{{ asset('assets/images/shop-banner.jpg')}}" alt=""></figure>
+							<figure><img src="{{ asset('assets/images/baner3.jpg')}}" alt=""></figure>
 						</a>
 					</div>
 
@@ -65,7 +65,7 @@
 								<div class="product product-style-3 equal-elem ">
 									<div class="product-thumnail">
 										<a href="{{route('product.details',['slug'=>$product->slug])}}" title="{{$product->name}}">
-											<figure><img src="{{ asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}"></figure>
+											<figure><img  style="height: 220px; width: 200px;"  src="{{ asset('assets/images/products')}}/{{$product->image}}" alt="{{$product->name}}"></figure>
 										</a>
 									</div>
 									<div class="product-info">
@@ -100,14 +100,22 @@
 						<h2 class="widget-title">All Categories</h2>
 						<div class="widget-content">
 							<ul class="list-category">
-								@foreach ($categories  as  $category)
-								<li class="category-item">
-									<a href="{{route("product.category",['category_slug'=>$category->slug])}}"
-                                         class="cate-link">{{ $category->name}}</a>
-								</li>
+								@foreach ($categories as $category)
+								  <li class="category-item {{ count($category->subCategories) > 0 ? 'has-child-cate':'' }}">
+									<a href="{{ route('product.category', ['category_slug' => $category->slug]) }}" class="cate-link">{{ $category->name }}</a>
+									@if (count($category->subCategories) > 0)
+									  <span class="toggle-control">+</span>
+									  <ul class="sub-cate">
+										@foreach ($category->subCategories as $scategory)
+										  <li class="category-item">
+											<a href="{{ route('product.category', ['category_slug' => $category->slug, 'scategory_slug' => $scategory->slug]) }}" class="cat-link"><i class="fa fa-caret-right"> {{ $scategory->name }}</i></a>
+										  </li>
+										@endforeach
+									  </ul>
+									@endif
+								  </li>
 								@endforeach
-							
-							</ul>
+							  </ul>
 						</div>
 					</div><!-- Categories widget-->
 
@@ -179,7 +187,7 @@
 									<div class="product product-widget-style">
 										<div class="thumbnnail">
 											<a href="detail.html" title="Radiant-360 R6 Wireless Omnidirectional Speaker [White]">
-												<figure><img  style="height: 220px; width: 200px;" src="{{ asset('assets/images/products/digital_1.jpg')}}" alt=""></figure>
+												<figure><img   src="{{ asset('assets/images/products/digital_1.jpg')}}" alt=""></figure>
 											</a>
 										</div>
 										<div class="product-info">

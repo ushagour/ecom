@@ -456,11 +456,15 @@
                                     <h3 class="item-header">My Account</h3>
                                     <div class="item-content">
                                         <div class="wrap-vertical-nav">
-                                            <ul>
-                                                <li class="menu-item"><a href="#" class="link-term">My Account</a></li>
+                                            <ul> @auth
+    
+                                                @if(Auth::user()->utype === 'USR')
+                                                <li class="menu-item"><a href="{{route('user.dashboard')}}" class="link-term">My Account</a></li>
+
+                                                @endif
+                                                @endauth
                                                 <li class="menu-item"><a href="#Brands" class="link-term">Brands</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term">Affiliates</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term">Wish list</a></li>
+                                                <li class="menu-item"><a href="/wishlist" class="link-term">Wish list</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -470,10 +474,15 @@
                                     <div class="item-content">
                                         <div class="wrap-vertical-nav">
                                             <ul>
-                                                <li class="menu-item"><a href="#" class="link-term">Contact Us</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term">Site Map</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term">Specials</a></li>
-                                                <li class="menu-item"><a href="#" class="link-term">Order History</a>
+                                                <li class="menu-item"><a href="/contact-us" class="link-term">Contact Us</a></li>
+                                                <li class="menu-item"><a href="/contact-us#map" class="link-term">Site Map</a></li>
+                                                @auth
+    
+                                                @if(Auth::user()->utype === 'USR')
+                                                <li class="menu-item"><a href="{{route('user.orders')}}" class="link-term">Order History</a>
+                                                @endif
+                                                @endauth
+                                               
                                                 </li>
                                             </ul>
                                         </div>

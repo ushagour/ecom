@@ -14,7 +14,7 @@
 		<div class="container">
 			<!-- <div class="main-content-area"> -->
 				<div class="aboutus-info style-center">
-					<h1 style="font-family: cursive;"><b class="box-title">Mot du Président</b></h1>
+					<span style="font-family: cursive; font-size:xxx-large!important;"><b class="box-title">Mot du Président</b></span>
 					<p class="txt-content">
                         AKLIM symbole de grandeur; de richesse, de splendeur et de résilience, est l’un des plus hauts sommets de l’anti-atlas marocain, il représente une inspiration forte à notre activité;
 
@@ -30,7 +30,96 @@
                         
                         En résumé, Aklim se réjouit d’être un acteur participant à la socialisation des individus.</p>
 				</div>
+				<div class="our-team-info">
+					<h4 class="title-box">Nos défis réalisés</h4>
+					<div class="our-staff">
+						<div 
+							class="slide-carousel owl-carousel style-nav-1 equal-container" 
+							data-items="5" 
+							data-loop="false" 
+							data-nav="true" 
+							data-dots="false"
+							data-margin="30"
+							data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"3"},"1200":{"items":"4"}}' >
 
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="RABAT">
+										<figure><img src="assets/images/relise/1.jpg" alt="LEONA"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title"><B>Rabat</B></span>
+									<p class="desc">Reaménagement de la PLACE MOULAY HASSAN </p>
+								</div>
+							</div>
+
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="Casablanca">
+										<figure><img src="assets/images/relise/2.jpg" alt="LUCIA"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title"><b>Casablanca</b></span>
+									<p class="desc">Aménagement de la place du grand théâtre de Casablanca </p>
+								</div>
+							</div>
+
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="Sale">
+										<figure><img src="assets/images/relise/3.jpg" alt="Sale"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title"><b>Sale</b></span>
+									<p class="desc">Extention tramway de Rabat (Hay Salam) </p>
+								</div>
+							</div>
+
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="Nador">
+										<figure><img src="assets/images/relise/4.jpg" alt="Nador"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title"><b>Nador</b></span>
+									<p class="desc">Aéroport Nador El Aroui .</p>
+								</div>
+							</div>
+
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="LUCIA">
+										<figure><img src="assets/images/relise/5.jpg" alt="LUCIA"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title">Ben Guerir</span>
+									<p class="desc">Av. Mohamed V, Ben Guerir ..</p>
+								</div>
+							</div>
+
+							<div class="team-member equal-elem">
+								<div class="media">
+									<a href="#" title="NANA">
+										<figure><img src="assets/images/relise/6.jpg" alt="NANA"></figure>
+									</a>
+								</div>
+								<div class="info">
+									<span class="title">Bernoussi</span>
+									<p class="desc">Place public Sidi Bernoussi .</p>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+				<hr>
 				<div class="row equal-container">
 					<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
 						<div class="aboutus-box-score equal-elem ">
@@ -123,95 +212,7 @@
 					</div>
 				</div>
 
-				<div class="our-team-info">
-					<h4 class="title-box">Nos défis réalisés</h4>
-					<div class="our-staff">
-						<div 
-							class="slide-carousel owl-carousel style-nav-1 equal-container" 
-							data-items="5" 
-							data-loop="false" 
-							data-nav="true" 
-							data-dots="false"
-							data-margin="30"
-							data-responsive='{"0":{"items":"1"},"480":{"items":"2"},"768":{"items":"3"},"992":{"items":"3"},"1200":{"items":"4"}}' >
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="RABAT">
-										<figure><img src="assets/images/relise/1.jpg" alt="LEONA"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<span class="title"><B>Rabat</B></span>
-									<p class="desc">Reaménagement de la PLACE MOULAY HASSAN </p>
-								</div>
-							</div>
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="Casablanca">
-										<figure><img src="assets/images/relise/2.jpg" alt="LUCIA"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<span class="title"><b>Casablanca</b></span>
-									<p class="desc">Aménagement de la place du grand théâtre de Casablanca </p>
-								</div>
-							</div>
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="Sale">
-										<figure><img src="assets/images/relise/3.jpg" alt="Sale"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<span class="title"><b>Sale</b></span>
-									<p class="desc">Extention tramway de Rabat (Hay Salam) </p>
-								</div>
-							</div>
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="Nador">
-										<figure><img src="assets/images/relise/4.jpg" alt="Nador"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<span class="title"><b>Nador</b></span>
-									<p class="desc">Aéroport Nador El Aroui .</p>
-								</div>
-							</div>
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="LUCIA">
-										<figure><img src="assets/images/relise/5.jpg" alt="LUCIA"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<span class="title">Ben Guerir</span>
-									<p class="desc">Av. Mohamed V, Ben Guerir ..</p>
-								</div>
-							</div>
-
-							<div class="team-member equal-elem">
-								<div class="media">
-									<a href="#" title="NANA">
-										<figure><img src="assets/images/relise/6.jpg" alt="NANA"></figure>
-									</a>
-								</div>
-								<div class="info">
-									<span class="title">Bernoussi</span>
-									<p class="desc">Place public Sidi Bernoussi .</p>
-								</div>
-							</div>
-
-						</div>
-
-					</div>
-
-				</div>
+			
 			<!-- </div> -->
 			
 
