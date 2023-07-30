@@ -7,29 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Aklim</title>
     <link rel="shortcut icon" type="image/x-icon" href="{{ asset('assets/images/favicon.png')}}">
-    <link
-        href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext"
-        rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css')}}">
-
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css')}}">
-
-    <!-- admin dashboard cdns   -->
-    <script src="{{ asset('assets/adminvendor/jquery/jquery.js')}}"></script>
-    <link rel="stylesheet" href="{{ asset('assets/adminvendor/jquery-datatables-bs3/assets/css/datatables.css')}}" />
-
-
+  	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400italic,700,700italic,900,900italic&amp;subset=latin,latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open%20Sans:300,400,400italic,600,600italic,700,700italic&amp;subset=latin,latin-ext" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/animate.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/font-awesome.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/flexslider.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-03.css') }}">
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.css"/>
+	@livewireStyles
     @stack('more_style')
-    @livewireStyles
     <style>
         .elementor-image-gallery .gallery-item {
             display: inline-block;
@@ -571,19 +564,25 @@
     </footer>
     
     
-    {{-- <script src="{{ asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4')}}"></script> --}}
-    <script src="{{ asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4')}}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-    <script src="{{ asset('assets/js/bootstrap.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.flexslider.js')}}"></script>
-    <script src="{{ asset('assets/js/chosen.jquery.min.js')}}"></script>
-    <script src="{{ asset('assets/js/owl.carousel.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.countdown.min.js')}}"></script>
-    <script src="{{ asset('assets/js/jquery.sticky.js')}}"></script>
-    <script src="{{ asset('assets/js/functions.js')}}"></script>
-    <!-- admin dashboard cdns   -->
+	<script src="{{ asset('assets/js/jquery-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
+	<script src="{{ asset('assets/js/jquery-ui-1.12.4.minb8ff.js?ver=1.12.4') }}"></script>
+	<script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+	<script src="{{ asset('assets/js/jquery.flexslider.js') }}"></script>
+	<script src="{{ asset('assets/js/chosen.jquery.min.js') }}"></script>
+	<script src="{{ asset('assets/js/owl.carousel.min.js') }}"></script>
+	<script src="{{ asset('assets/js/jquery.countdown.min.js') }}"></script>
+	<script src="{{ asset('assets/js/jquery.sticky.js') }}"></script>
+	<script src="{{ asset('assets/js/functions.js') }}"></script>
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.6.3/nouislider.min.js"></script>
+  <script src="https://cdn.tiny.cloud/1/j1br3x3qdm2wjyhyykuzqleo1bo94ipjgb0wungiykb8g0gk/tinymce/6/tinymce.min.js"></script>
+
+	
+	
+	
     <script src="{{ asset('assets/adminvendor/jquery-datatables/media/js/jquery.dataTables.js')}}"></script>
     <script src="{{ asset('assets/adminvendor/jquery-datatables/extras/TableTools/js/dataTables.tableTools.min.js')}}"></script>
     <script src="{{ asset('assets/adminvendor/jquery-datatables-bs3/assets/js/datatables.js')}}"></script>
@@ -591,7 +590,6 @@
     <script src="{{ asset('assets/js/spinner.js')}}"></script>
     <script src="{{ asset('assets/adminvendor/form/examples.advanced.form.js')}}"></script>		
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.3/moment.min.js"></script>
-    <script src="{{ asset('assets/adminvendor/bootstrap-timepicker/js/bootstrap-timepicker.js')}}"></script>
 
 
     @stack("more_scripts")
