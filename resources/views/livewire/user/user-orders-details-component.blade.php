@@ -21,14 +21,14 @@
             <table class="table">
               <th>Ordered Id</th>
 
-
+            
 
 
               <th>Ordere Date</th>
               <td>{{ $order->created_at }}</td>
               <th>Status</th>
               <td>{{ $order->status }}</td>
-              @if ($order->status == 'delivered')
+              @if ($order->status == 'delivred')
                 <th>Delivery Date</th>
                 <td>{{ $order->delivered_date }}</td>
               @elseif ($order->status == 'canceled')

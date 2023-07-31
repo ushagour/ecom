@@ -10,11 +10,13 @@ class AdminDashboardComponent extends Component
 {
   public function render()
   {
+
+   
     $orders = Order::orderBy('created_at', 'DESC')->get()->take(10);
-    $totalSales = Order::where('status', 'delivered')->count();
-    $totalRevenue = Order::where('status', 'delivered')->sum('total');
-    $todaySales = Order::where('status', 'delivered')->whereDate('created_at', Carbon::today())->count();
-    $todayRevenue = Order::where('status', 'delivered')->whereDate('created_at', Carbon::today())->sum('total');
+    $totalSales = Order::where('status', 'delivred')->count();
+    $totalRevenue = Order::where('status', 'delivred')->sum('total');
+    $todaySales = Order::where('status', 'delivred')->whereDate('created_at', Carbon::today())->count();
+    $todayRevenue = Order::where('status', 'delivred')->whereDate('created_at', Carbon::today())->sum('total');
 
     return view('livewire.admin.admin-dashboard-component', compact('orders', 'totalSales', 'totalRevenue', 'todaySales', 'todayRevenue'))->layout('layouts.base');
   }
