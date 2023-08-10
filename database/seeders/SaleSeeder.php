@@ -18,7 +18,7 @@ class SaleSeeder extends Seeder
         $sale = [
             [
                 'sale_date' => now(),
-                'status'    => true
+                'status'    => 1
             ]
         ];
 

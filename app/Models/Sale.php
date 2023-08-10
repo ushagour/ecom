@@ -17,28 +17,15 @@ class Sale extends Model
         'updated_at',
         'deleted_at'
     ];
-
     protected $fillable = [
-        'order_id',
-        'firstName',
-        'lastName',
-        'mobile',
-        'email',
-        'line',
-        'line1',
-        'city',
-        'province',
-        'country',
-        'zipcode',     
+        'sale_date',
+        'status',
         'created_at',
-        'updated_at',
-        'deleted_at'
+        'updated_at'
     ];
-    protected function serializeDate(DateTimeInterface $date)
-    {
-        return $date->format('Y-m-d H:i:s');
-    }
 
+  
+ 
     
 
 }

@@ -21,8 +21,8 @@ class HomeComponent extends Component
             $categories = Category::whereIn("id",$cats)->get(); //fetching  categories Model  where id in array of sel categories   
                 
             $sProducts =  Product::where('sale_price','>',0)->inRandomOrder()->get()->take(8);
-            $onSale =  Sale::where("status",1)->first(); 
-            // dd($onSale->status);
+            $onSale =  Sale::where("status",true)->first(); 
+            //  dd($onSale->status);
        return view('livewire.home-component',
        ["homesliders" => $sliders,"Lproducts"=>$Lproducts,"categories"=>$categories
        ,"no_of_products"=>HomeCategory::find(1)->no_of_products,"onSale"=>$onSale
