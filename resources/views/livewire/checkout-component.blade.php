@@ -19,7 +19,9 @@
 			</ul>
 		</div>
 		<div class=" main-content-area">
-			<form wire:submit.prevent="placeOrder" autocomplete="off" onsubmit="$('#processing').show();">
+			<form  wire:submit.prevent="placeOrder" autocomplete="off" onsubmit="$('#processing').show();">
+				{{-- @method('POST') --}}
+
 				<div class="row">
 					<div class="col-md-12">
 						<div class="wrap-address-billing">
@@ -264,7 +266,7 @@
 						@endif
 						<div class="choose-payment-methods">
 							<label class="payment-method">
-								<input name="payment-method" id="payment-method-bank" checked value="cod" type="radio" wire:model="paymentmode">
+								<input name="payment-method" id="payment-method-bank"  value="COD" type="radio" wire:model="paymentmode" checked='true'>
 								<span>Cash on Delivery</span>
 								<span class="payment-desc">Order Now! Pay on Delivery.</span>
 							</label>

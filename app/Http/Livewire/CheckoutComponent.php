@@ -7,7 +7,6 @@ use App\Models\OrderItem;
 use App\Models\Shipping;
 use App\Models\Transaction;
 use Cart;
-use PDF;
 use Exception;
 use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
@@ -68,6 +67,7 @@ class CheckoutComponent extends Component
     $order = new Order();
     $order->user_id = Auth::user()->id;
     $order->tax =session()->get('checkout')['tax'];
+    $order->subtotal =session()->get('checkout')['subtotal'];
     $order->total =session()->get('checkout')['total'];
     $order->firstname = $this->firstname;
     $order->lastname = $this->lastname;
@@ -79,7 +79,7 @@ class CheckoutComponent extends Component
     $order->province = $this->province;
     $order->country = $this->country;
     $order->zipcode = $this->zipcode;
-    // $order->status = 'ordered';
+    $order->status = 'ordred';
     $order->is_shipping_difrent = $this->ship_to_different ? 1 : 0;
     $order->save();
 
@@ -123,7 +123,7 @@ class CheckoutComponent extends Component
       $shipping->save();
     }
 
-    if ($this->paymentmode == 'cod') {
+    if ($this->paymentmode == 'COD') {
       $this->makeTransaction($order->id, 'pending');
       $this->resetCart();
     }
@@ -141,7 +141,7 @@ class CheckoutComponent extends Component
   public function makeTransaction($order_id, $status)
   {
     $transaction = new Transaction();
-    // $transaction->user_id = Auth::user()->id;
+    $transaction->user_id = Auth::user()->id;
     $transaction->order_id = $order_id;
     $transaction->mode = $this->paymentmode;
     $transaction->status = $status;

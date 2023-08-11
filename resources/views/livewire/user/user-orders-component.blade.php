@@ -45,7 +45,7 @@
                   <td>{{ $order->status }}</td>
                   <td>{{ $order->created_at }}</td>
                   <td>
-                    <a href="{{ asset('/assets/devis.pdf')}}" target="_blank" class="btn btn-primary btn-sm">Devis</a>
+                    <a href="{{ route('devi', $order->id) }}" target="_blank" class="btn btn-primary btn-sm">Devis</a>
                     <a href="{{ route('user.orderdetails', $order->id) }}" class="btn btn-danger btn-sm">Details</a></td>
                 </tr>
                 @endforeach

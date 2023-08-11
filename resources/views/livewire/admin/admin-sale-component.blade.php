@@ -24,7 +24,7 @@
             <div class="form-group">
               <label for="sale-date" class="col-md-4 control-label">Sale Date</label>
               <div class="col-md-4">
-                <input type="text" name="sale-date" id="sale-date" placeholder="YYYY/MM/DD H:M:S" class="form-control input-md" wire:model="sale_date">
+                Sale Price	                <input type="date" name="sale-date" id="sale-date" placeholder="YYYY/MM/DD H:M:S" class="form-control input-md" wire:model="sale_date">
               </div>
             </div>
             <div class="form-group">

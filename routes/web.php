@@ -38,6 +38,7 @@ use App\Http\Controllers\PDFController;
 use App\Http\Livewire\Admin\AdminAddAttributeComponent;
 use App\Http\Livewire\Admin\AdminAttributesComponent;
 use App\Http\Livewire\Admin\AdminEditAttributeComponent;
+use App\Http\Controllers\Order;
 
 
 /*
@@ -70,7 +71,7 @@ Route::get('/cataloge', CatalogeComponent::class)->name('cataloge');
 
 
 // Route::get('/test',TestController::class,'test');
-Route::get('/test', [TestController::class, 'test']);
+Route::get('/devi/{id}', [PDFController::class, 'generateInvoicePDF'])->name('devi');
 Route::get('generate-invoice-pdf',[PDFController::class, 'generateInvoicePDF'])->name('generateDevi');;
 
 

@@ -18,12 +18,12 @@ class Product extends Model
         'updated_at',
         'deleted_at',
     ];
-
     protected $fillable = [
         'product_id',
         'order_id',
         'price',
         'quantity',
+        'sale_price',
         'created_at',
         'updated_at',
         'deleted_at'
