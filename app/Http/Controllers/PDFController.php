@@ -5,8 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use PDF;
 use App\Models\Order;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
   
 class PDFController extends Controller
 {
@@ -15,7 +17,7 @@ class PDFController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function generateInvoicePDF()
+    public function generateInvoicePDF($order_id)
     {
        
 
@@ -35,12 +37,43 @@ class PDFController extends Controller
         //     ->shipping(1.99)
         //     ->addItem($item);
 
-        // return $invoice->stream();
-        $order = Order::all();
+        // $data= OrderItem::with(['product','order'])->where('id',2)->first();
+        $data = Order::where('id', $order_id)->first();
 
-           dd($order->shipping->id);
-        // $pdf = PDF::loadView('vendor.invoices.templates.invoice_order_receipt', array('order'=>$order));
-        // return $pdf->download('nicesnippets.pdf');
+        // $data = [
+        //     'title' => 'Sample PDF Title',
+        //     'content' => 'This is the PDF content.',
+        // ];
+        // dd($data);
+        // $pdf = PDF::loadView('pdf.document',$data);
+        // // return $pdf->download('nicesnippets.pdf');
+        // return $pdf->stream('document.pdf');
+        // $pdf = PDF::loadView('vendor.invoices.templates.default');
+        // return $pdf->stream();
+
+
+        // $data=[
+        //     '{
+        //     "invoice_number": "INV-2023-001",
+        //     "date": "2023-07-19",
+        //     "due_date": "2023-08-19",
+        //     "customer_name": "John Doe",
+        //     "items": [
+        //         {"description": "Item 1", "quantity": 2, "price": 25.00},
+        //         {"description": "Item 2", "quantity": 1, "price": 30.00}
+        //     ],
+        //     "total": 80.00
+        // }'
+        // ]
+        
+
+            
+        //  dd($data->orderItems);
+      
+
+        $pdf = PDF::loadView('pdf.document',['order'=>$data]);
+        // return $pdf->download('invoice.pdf');
+                return $pdf->stream();
 
     }
 }
