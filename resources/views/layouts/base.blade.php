@@ -270,7 +270,7 @@
                         <div class="wrap-logo-top left-section">
                             {{-- #Todo :change the logo  nb logo whene you resize the page    --}}
                             <a href="/" class="link-to-home" ><img height="50%" width="50%"
-                                    src="{{ asset('assets/images/logo-top-1.png')}}" alt="mercado"></a>
+                                    src="{{ asset('assets/images/logo-top-1.webp')}}" alt="mercado"></a>
                         </div>
 
                      @livewire('header-component')

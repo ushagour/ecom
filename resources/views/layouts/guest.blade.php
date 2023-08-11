@@ -19,45 +19,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/owl.carousel.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/chosen.min.css')}}">
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-01.css')}}">
-    <style>
-        #button {
-      display: inline-block;
-      background-color: #FF9800;
-      width: 50px;
-      height: 50px;
-      text-align: center;
-      border-radius: 4px;
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      transition: background-color .3s, 
-        opacity .5s, visibility .5s;
-      opacity: 0;
-      visibility: hidden;
-      z-index: 1000;
-    }
-    #topcontrol::after {
-      content: "\f077";
-      font-family: FontAwesome;
-      font-weight: normal;
-      font-style: normal;
-      font-size: 2em;
-      line-height: 50px;
-      color: #fff;
-    }
-    #topcontrol:hover {
-      cursor: pointer;
-      background-color: #333;
-    }
-    #topcontrol:active {
-      background-color: #555;
-    }
-    #topcontrol.show {
-      opacity: 1;
-      visibility: visible;
-    }
-    </style>
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/color-03.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/catalog.css')}}">
+  
 </head>
 
 
@@ -196,7 +160,7 @@
 
                         <div class="wrap-logo-top left-section">
                             <a href="/" class="link-to-home"><img
-                                    src="{{ asset('assets/images/logo-top-1.png')}}" alt="mercado"></a>
+                                    src="{{ asset('assets/images/logo-top-1.webp')}}" alt="mercado"></a>
                         </div>
 
                         <div class="wrap-search center-section">
